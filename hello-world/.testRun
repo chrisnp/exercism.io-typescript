@@ -1,0 +1,26 @@
+$ tsc --noEmit -p . && jest --no-cache
+ PASS  .\hello-world.test.ts (5.103s)
+  Hello World
+    √ says hello world with no name (9ms)
+    ○ skipped 2 tests
+
+Test Suites: 1 passed, 1 total
+Tests:       2 skipped, 1 passed, 3 total
+Snapshots:   0 total
+Time:        8.479s
+Ran all test suites.
+Done in 17.32s.
+
+
+$ tsc --noEmit -p . && jest --no-cache
+PASS .\hello-world.test.ts
+  Hello World
+    √ says hello world with no name (8ms)
+    √ says hello to bob (1ms)
+    √ says hello to sally (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        9.411s
+Ran all test suites.
