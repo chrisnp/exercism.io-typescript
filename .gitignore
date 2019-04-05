@@ -1,5 +1,8 @@
+.vscode
+
 yarn.lock
 /*/yarn.lock
-.vscode
+
 node_modules
 /*/node_modules
+cleanup.ps1
