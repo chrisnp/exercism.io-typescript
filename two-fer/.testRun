@@ -1,0 +1,17 @@
+yarn run v1.15.2
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...two-fer.test.ts
+
+ PASS  .\two-fer.test.ts
+  TwoFer
+    √ no name given (8ms)
+    √ a name given (1ms)
+    √ another name given (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        7.2s
+Ran all test suites.
+Done in 15.88s.
