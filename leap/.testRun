@@ -1,0 +1,22 @@
+yarn run v1.15.2
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...leap.test.ts
+
+ PASS .\leap.test.ts
+  A leap year
+    √ is not very common (11ms)
+    √ is introduced every 4 years to adjust about a day (2ms)
+    √ is skipped every 100 years to remove an extra day (1ms)
+    √ is reintroduced every 400 years to adjust another day (1ms)
+    Additional example of a leap year that
+      √ is not a leap year (1ms)
+      √ is a common leap year (1ms)
+      √ is skipped every 100 years (1ms)
+      √ is reintroduced every 400 years
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6.924s
+Ran all test suites.
