@@ -1,0 +1,25 @@
+yarn run v1.15.2
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...difference-of-squares.test.ts
+
+ PASS  .\difference-of-squares.test.ts (5.296s)
+  Squares
+    up to 5
+      √ gets the square of sum (11ms)
+      √ gets the sum of squares (1ms)
+      √ gets the difference
+    up to 10
+      √ gets the square of sum (1ms)
+      √ gets the sum of squares (1ms)
+      √ gets the difference (1ms)
+    up to 100
+      √ gets the square of sum (1ms)
+      √ gets the sum of squares (1ms)
+      √ gets the difference (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        8.085s
+Ran all test suites.
