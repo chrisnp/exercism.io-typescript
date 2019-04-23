@@ -1,0 +1,19 @@
+yarn run v1.15.2
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...reverse-string.test.ts
+
+ PASS  .\reverse-string.test.ts (5.872s)
+  Reverse String
+    √ an empty string (13ms)
+    √ a word (2ms)
+    √ a capitalized word (1ms)
+    √ a sentence with punctuation (1ms)
+    √ a palindrome (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        9.768s
+Ran all test suites.
+Done in 18.63s.
