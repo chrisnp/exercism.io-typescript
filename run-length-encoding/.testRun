@@ -1,0 +1,29 @@
+yarn run v1.15.2
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...run-length-encoding.test.ts
+
+ PASS  .\run-length-encoding.test.ts
+  run-length encode a string
+    √ empty string (7ms)
+    √ single characters only are encoded without count (1ms)
+    √ string with no single characters (1ms)
+    √ single characters mixed with repeated characters (1ms)
+    √ multiple whitespace mixed in string
+    √ lowercase characters
+  run-length decode a string
+    √ empty string (1ms)
+    √ single characters only
+    √ string with no single characters (1ms)
+    √ single characters with repeated characters
+    √ multiple whitespace mixed in string (1ms)
+    √ lower case string
+  encode and then decode
+    √ encode followed by decode gives original string (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        7.774s
+Ran all test suites.
+Done in 16.22s.
