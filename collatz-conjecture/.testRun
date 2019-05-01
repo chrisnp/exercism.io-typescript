@@ -1,0 +1,20 @@
+yarn run v1.15.2
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...collatz-conjecture.test.ts
+
+ PASS  .\collatz-conjecture.test.ts
+  CollatzConjecture
+    √ zero steps for one (6ms)
+    √ divide if even (1ms)
+    √ even and odd steps
+    √ Large number of even and odd steps (1ms)
+    √ zero is an error (1ms)
+    √ negative value is an error
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        5.301s
+Ran all test suites.
+Done in 12.38s.
