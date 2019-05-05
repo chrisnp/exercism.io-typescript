@@ -34,3 +34,42 @@ Snapshots:   0 total
 Time:        6.407s
 Ran all test suites.
 Done in 13.56s.
+
+
+yarn run v1.15.2
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...all-your-base.test.ts
+
+ PASS  .\all-your-base.test.ts (5.152s)
+  Converter
+    √ single bit one to decimal (13ms)
+    √ binary to single decimal (1ms)
+    √ single decimal to binary
+    √ binary to multiple decimal (1ms)
+    √ decimal to binary
+    √ trinary to hexadecimal (1ms)
+    √ hexadecimal to trinary
+    √ 15-bit integer (1ms)
+    √ empty list (1ms)
+    √ single zero
+    √ multiple zeros (1ms)
+    √ leading zeros
+    √ negative digit (1ms)
+    √ invalid positive digit
+    √ first base is one
+    √ second base is one (1ms)
+    √ first base is zero (1ms)
+    √ second base is zero (1ms)
+    √ first base is negative (2ms)
+    √ second base is negative
+    √ both bases are negative (1ms)
+    √ wrong output_base base not integer
+
+Test Suites: 1 passed, 1 total
+Tests:       22 passed, 22 total
+Snapshots:   0 total
+Time:        8.02s
+Ran all test suites.
+Done in 17.27s.
+

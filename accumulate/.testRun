@@ -1,0 +1,19 @@
+yarn run v1.15.2
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...accumulate.test.ts
+
+ PASS  .\accumulate.test.ts
+  accumulate()
+    √ accumulation empty (21ms)
+    √ accumulate squares (4ms)
+    √ accumulate upcases (2ms)
+    √ accumulate reversed strings (2ms)
+    √ accumulate recursively (2ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        5.641s
+Ran all test suites.
+Done in 13.09s.
