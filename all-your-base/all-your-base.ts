@@ -1,16 +1,9 @@
-function toType(obj?: Object) {
-    return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
-}
+const toType = (obj?: Object) => ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
 
-function validBase(base: number) {
-    return toType(base) == 'number' && Math.floor(base) === base && base > 1
-}
+const validBase = (base: number) => toType(base) == 'number' && Math.floor(base) === base && base > 1
 
-function validInput(input: number[], fromBase: number) {
-    return input.length > 0
-        && !(input.length > 1 && input[0] === 0)
-        && input.every((d) => 0 <= d && d < fromBase)
-}
+const validInput = (input: number[], fromBase: number) => input.length > 0
+                   && !(input.length > 1 && input[0] === 0) && input.every((d) => 0 <= d && d < fromBase)
 
 export default class Converter {
 
@@ -30,7 +23,7 @@ export default class Converter {
         
         let num = input.reduce((acc, x) => acc * fromBase + x, 0)
 
-        const digits = []
+        const digits : number[] = []
 
         do {
             digits.unshift(num % toBase)
