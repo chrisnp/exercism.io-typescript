@@ -1,0 +1,24 @@
+yarn run v1.15.2
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...rotational-cipher.test.ts
+
+ PASS  .\rotational-cipher.test.ts (9.721s)
+  RotationalCipher
+    √ rotate a by 1 (11ms)
+    √ rotate a by 26, same output as input (1ms)
+    √ rotate a by 0, same output as input (1ms)
+    √ rotate m by 13 (1ms)
+    √ rotate n by 13 with wrap around alphabet
+    √ rotate capital letters (1ms)
+    √ rotate spaces
+    √ rotate numbers (1ms)
+    √ rotate punctuation (1ms)
+    √ rotate all letters (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        18.609s
+Ran all test suites.
+Done in 32.58s.
