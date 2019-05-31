@@ -1,0 +1,24 @@
+yarn run v1.16.0
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...diffie-hellman.test.ts
+
+ PASS  .\diffie-hellman.test.ts
+  diffie-hellman
+    √ throws an error if the constructor arguments are out of range (5ms)
+    √ throws an error if the constructor arguments are not prime (1ms)
+    √ throws an error if private key is negative
+    √ throws an error if private key is zero
+    √ throws an error if private key is one
+    √ throws an error if private key equals the modulus parameter p (1ms)
+    √ throws an error if private key is greater than the modulus parameter p
+    √ when given a private key, returns the correct public one (2ms)
+    √ when given a different private key, returns the correct public one
+    √ can generate a shared secret from our private key and their public key (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        4.165s
+Ran all test suites.
+Done in 9.26s.
