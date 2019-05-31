@@ -1,4 +1,3 @@
-const assert :  = import(assert)
 
 const isPrime = (num: number) => {
     for (let i = 2; i < num; i++) {
