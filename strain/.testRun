@@ -1,0 +1,27 @@
+yarn run v1.16.0
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...strain.test.ts
+
+$ tsc --noEmit -p . && jest --no-cache
+ PASS  .\strain.test.ts
+  strain
+    √ keeps on empty array returns empty array (4ms)
+    √ keeps everything  (1ms)
+    √ keeps first and last (1ms)
+    √ keeps neither first nor last
+    √ keeps strings
+    √ keeps arrays (1ms)
+    √ empty discard
+    √ discards nothing
+    √ discards first and last (1ms)
+    √ discards neither first nor last
+    √ discards strings
+    √ discards arrays (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        4.083s
+Ran all test suites.
+Done in 7.86s.
