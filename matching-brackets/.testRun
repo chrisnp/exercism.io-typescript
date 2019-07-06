@@ -1,0 +1,95 @@
+yarn run v1.16.0
+$ tsc --noEmit -p . && jest --no-cache
+
+RUNS  ...matching-brackets.test.ts
+
+FAIL .\matching-brackets.test.ts (16.417s)
+  Matching Brackets
+    √ paired square brackets (60ms)
+    √ empty string (5ms)
+    √ unpaired brackets (3ms)
+    √ wrong ordered brackets (1ms)
+    √ wrong closing bracket (1ms)
+    × paired with whitespace (1014ms)
+    √ simple nested brackets (1ms)
+    √ several paired brackets (1ms)
+    √ paired and nested brackets (2ms)
+    √ unopened closing brackets (20ms)
+    √ unpaired and nested brackets (2ms)
+    √ paired and wrong nested brackets (2ms)
+    × math expression (5ms)
+    × complex latex expression (3ms)
+
+  ● Matching Brackets › paired with whitespace
+
+    expect(received).toBeTruthy()
+
+    Expected value to be truthy, instead received
+      false
+
+      at Object.it (matching-brackets.test.ts:31:45)
+          at new Promise (<anonymous>)
+          at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:189:7)
+
+  ● Matching Brackets › math expression
+
+    expect(received).toBeTruthy()
+
+    Expected value to be truthy, instead received
+      false
+
+      at Object.it (matching-brackets.test.ts:66:45)
+          at new Promise (<anonymous>)
+          at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:189:7)
+
+  ● Matching Brackets › complex latex expression
+
+    expect(received).toBeTruthy()
+
+    Expected value to be truthy, instead received
+      false
+
+      at Object.it (matching-brackets.test.ts:71:45)
+          at new Promise (<anonymous>)
+          at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:189:7)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 11 passed, 14 total
+Snapshots:   0 total
+Time:        32.057s
+Ran all test suites.
+error Command failed with exit code 1.yarn run v1.16.0
+
+
+
+
+$ tsc --noEmit -p . && jest --no-cache
+
+RUNS  ...matching-brackets.test.ts
+
+PASS .\matching-brackets.test.ts (9.932s)
+  Matching Brackets
+    √ paired square brackets (21ms)
+    √ empty string (3ms)
+    √ unpaired brackets (2ms)
+    √ wrong ordered brackets (1ms)
+    √ wrong closing bracket (1ms)
+    √ paired with whitespace (2ms)
+    √ simple nested brackets (1ms)
+    √ several paired brackets (1ms)
+    √ paired and nested brackets (1ms)
+    √ unopened closing brackets (1ms)
+    √ unpaired and nested brackets (2ms)
+    √ paired and wrong nested brackets (1ms)
+    √ math expression (1ms)
+    √ complex latex expression (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       14 passed, 14 total
+Snapshots:   0 total
+Time:        14.699s
+Ran all test suites.
+Done in 32.99s.
