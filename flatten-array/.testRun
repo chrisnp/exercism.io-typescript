@@ -1,0 +1,20 @@
+yarn run v1.16.0
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...flatten-array.test.ts
+
+ PASS  .\flatten-array.test.ts
+  Flatten Array
+    √ no nesting (7ms)
+    √ flattens array with just integers present
+    √ 5 level nesting (1ms)
+    √ 6 level nesting
+    √ 6 level nest list with null values (1ms)
+    √ all values in nested list are null (8ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        3.804s
+Ran all test suites.
+Done in 7.95s.
