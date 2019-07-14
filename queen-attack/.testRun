@@ -1,0 +1,25 @@
+yarn run v1.16.0
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...queen-attack.test.ts
+
+ PASS  .\queen-attack.test.ts
+  Queens
+    √ initialized with specific placement (5ms)
+    √ cannot occupy the same space
+    √ toString representation (1ms)
+    √ queens cannot attack
+    √ queens can attack when they are on the same row
+    √ queens can attack when they are on the same column
+    √ queens can attack diagonally
+    √ queens can attack another diagonally (1ms)
+    √ queens can attack yet another diagonally
+    √ queens can attack on a north-east/south-west diagonal
+    √ queens can attack on another ne/sw diagonal
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        3.17s
+Ran all test suites.
+Done in 6.85s.

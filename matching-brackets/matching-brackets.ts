@@ -15,5 +15,4 @@ export default class MatchingBrackets {
     } while (allBrackets !== matchAndStrip)
     return allBrackets === ''
   }
-
 }
