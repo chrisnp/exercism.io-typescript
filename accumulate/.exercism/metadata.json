@@ -1,9 +1,9 @@
 {
-    "track":"typescript",
-    "exercise":"accumulate",
-    "id":"04cd59598fdf408c8c12965bf62a7095",
-    "url":"https://exercism.io/tracks/typescript/exercises/accumulate/solutions/04cd59598fdf408c8c12965bf62a7095",
-    "handle":"heptalophos",
-    "is_requester":true,
-    "auto_approve":false
+  "track": "typescript",
+  "exercise": "accumulate",
+  "id": "04cd59598fdf408c8c12965bf62a7095",
+  "url": "https://exercism.io/tracks/typescript/exercises/accumulate/solutions/04cd59598fdf408c8c12965bf62a7095",
+  "handle": "heptalophos",
+  "is_requester": true,
+  "auto_approve": false
 }
