@@ -5,4 +5,5 @@ yarn.lock
 package-lock.json
 node_modules
 /*/node_modules
-cleanup.*
+cleanup.ps1
+cleanup.sh

@@ -1,2 +1,2 @@
-rm -r .\*\node_modules\
-echo Done!!
+
+bash .\cleanup.sh
