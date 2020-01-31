@@ -1,13 +1,13 @@
 export default class MatchingBrackets {
 
-  bracketsOnly: string
+  justTheBrackets: string
 
   constructor(input: string) {
-    this.bracketsOnly = input.replace(/[^\[\]|\(\)|\{\}]/g, '')
+    this.justTheBrackets = input.replace(/[^\[\]|\(\)|\{\}]/g, '')
   }
 
   isPaired(): Boolean {
-    let allBrackets = this.bracketsOnly
+    let allBrackets = this.justTheBrackets
     let matchAndStrip
     do {
       matchAndStrip = allBrackets
