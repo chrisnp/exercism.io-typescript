@@ -4,5 +4,5 @@ docs/*
 node_modules/*
 production_node_modules/*
 test/fixtures/*
-tmp/*
+tmp/
 jest.config.js
