@@ -1,29 +1,47 @@
-const toType = (obj?: Object) => ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
+// function toType(obj?: Object) {
+//     if (obj !== null) {
+//         return ({})
+//             .toString
+//             .call(obj)
+//             .match(/\s([a-zA-Z]+)/)[1]
+//             .toLowerCase()
+//     }
+//     throw new Error("Object is null")
+// }
 
-const validBase = (base: number) => toType(base) == 'number' && Math.floor(base) === base && base > 1
+function validBase(base: number) {
+    return  typeof(base) === 'number' &&
+            Math.floor(base) === base &&
+            base > 1
+}
 
-const validInput = (input: number[], fromBase: number) => input.length > 0
-                   && !(input.length > 1 && input[0] === 0) && input.every((d) => 0 <= d && d < fromBase)
+function validInput(input: number[], fromBase: number) {
+    return input.length > 0 &&
+            !(input.length > 1 && input[0] === 0) &&
+            input.every((d) => 0 <= d &&
+                        d < fromBase)
+}
 
 export default class Converter {
 
-    convert (input: number[] ,fromBase: number, toBase: number) {
-        
+    convert (input: number[], fromBase: number, toBase: number) {
+
         if (!validBase(fromBase)) {
             throw new Error("Wrong input base")
         }
 
-        if (!validBase(toBase)) { 
+        if (!validBase(toBase)) {
             throw new Error("Wrong output base")
         }
 
         if (!validInput (input, fromBase)) {
             throw new Error("Input has wrong format")
         }
-        
-        let num = input.reduce((acc, x) => acc * fromBase + x, 0)
 
-        const digits : number[] = []
+        let num =
+            input.reduce((acc, x) => acc * fromBase + x, 0)
+
+        const digits = []
 
         do {
             digits.unshift(num % toBase)
@@ -32,4 +50,4 @@ export default class Converter {
 
         return digits
     }
-}   
+}
