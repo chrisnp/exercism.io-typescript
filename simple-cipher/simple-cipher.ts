@@ -8,7 +8,7 @@ export default class SimpleCipher {
 
     constructor(key?: string) {
 
-        if (typeof key === 'undefined') {
+        if (key === undefined) {
             key = this.generateKey();
         }
         else if (key.length === 0 || key.match(/[^a-z]/)) {
@@ -18,15 +18,23 @@ export default class SimpleCipher {
     }
 
     private xShift(key: string, input: string, sign: number) {
-        return [...input].reduce((output, letter, i) => {
-            const offset = sign * ALPHA.indexOf(key[mod(i, key.length)])
-            output += ALPHA[mod(ALPHA.indexOf(letter) + offset, ALPHA.length)]
-            return output
-        }, '')
+        return [...input]
+               .reduce((output, letr, i) => {
+                   const offset =
+                       sign * ALPHA
+                              .indexOf(key[mod(i, key.length)])
+                   output +=
+                       ALPHA[mod(ALPHA.indexOf(letr) + offset,
+                                 ALPHA.length)]
+                    return output
+                }, '')
     }
 
     private generateKey() {
-        return Array(...Array(100)).map(() => ALPHA[Math.floor(Math.random() * ALPHA.length)]).join('')
+        return Array(...Array(100))
+               .map(() =>
+                   ALPHA[Math.floor(Math.random() * ALPHA.length)])
+               .join('')
     }
 
     encode(plaintext: string ): string {
@@ -37,4 +45,3 @@ export default class SimpleCipher {
         return this.xShift(this.key, ciphertext, -1)
     }
 }
-

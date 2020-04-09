@@ -1,14 +1,3 @@
-// function toType(obj?: Object) {
-//     if (obj !== null) {
-//         return ({})
-//             .toString
-//             .call(obj)
-//             .match(/\s([a-zA-Z]+)/)[1]
-//             .toLowerCase()
-//     }
-//     throw new Error("Object is null")
-// }
-
 function validBase(base: number) {
     return  typeof(base) === 'number' &&
             Math.floor(base) === base &&

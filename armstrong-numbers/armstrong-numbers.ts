@@ -1,11 +1,12 @@
 
 export default class ArmstrongNumbers {
 
-  public static isArmstrongNumber(number: number) {
+  public static isArmstrongNumber(num: number) {
 
-    return number == [...String(number)].map(x => Number(x))
-                                        .reduce((acc, n) => (
-                                          acc + Math.pow(n, [...String(number)].length)
-                                        ), 0)
+    return num === [...String(num)]
+                   .map(x => Number(x))
+                   .reduce((acc, n) =>
+                    (acc + Math.pow(n, [...String(num)].length)
+                    ), 0)
   }
 }

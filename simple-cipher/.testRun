@@ -29,3 +29,38 @@ Snapshots:   0 total
 Time:        3.119s
 Ran all test suites.
 Done in 6.78s.
+
+
+>yarn test
+
+yarn run v1.21.1
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...simple-cipher.test.ts
+
+ PASS  .\simple-cipher.test.ts
+  Random key generation
+    √ generates keys at random (7ms)
+  Random key cipher
+    √ has a key made of letters (1ms)
+    √ has a key that is at least 100 characters long (1ms)
+    √ can encode (1ms)
+    √ can decode
+    √ is reversible
+  Substitution cipher
+    √ keeps the submitted key (1ms)
+    √ can encode
+    √ can decode
+    √ is reversible (1ms)
+    √ : double shift encode
+    √ can wrap on encode (1ms)
+    √ can wrap on decode
+    √ can encode messages longer than the key" (1ms)
+    √ can decode messages longer than the key
+
+Test Suites: 1 passed, 1 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        4.723s
+Ran all test suites.
+Done in 11.46s.
