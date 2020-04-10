@@ -19,27 +19,6 @@ Ran all test suites.
 Done in 18.63s.
 
 
-yarn run v1.21.1
-$ yarn lint:types && jest --no-cache
-$ yarn tsc --noEmit -p .
-$ ~\exercism\typescript\reverse-string\node_modules\.bin\tsc --noEmit -p .
-
- PASS  ./reverse-string.test.ts (6.875s)
-  Reverse String
-    √ an empty string (17ms)
-    √ a word (2ms)
-    √ a capitalized word (1ms)
-    √ a sentence with punctuation (1ms)
-    √ a palindrome (2ms)
-
-Test Suites: 1 passed, 1 total
-Tests:       5 passed, 5 total
-Snapshots:   0 total
-Time:        9.222s
-Ran all test suites.
-Done in 21.79s.
-
-
 
 >yarn test
 
@@ -61,3 +40,26 @@ Tests:       5 passed, 5 total
 Snapshots:   0 total
 Time:        5.034s
 Ran all test suites.
+
+
+
+>yarn test
+
+yarn run v1.21.1
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\reverse-string\node_modules\.bin\tsc --noEmit -p .
+ PASS  ./reverse-string.test.ts (5.645s)
+  Reverse String
+    √ an empty string (5ms)
+    √ a word (1ms)
+    √ a capitalized word (1ms)
+    √ a sentence with punctuation
+    √ a palindrome (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        7.486s
+Ran all test suites.
+Done in 17.20s.
