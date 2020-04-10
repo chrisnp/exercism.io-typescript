@@ -27,3 +27,36 @@ Snapshots:   0 total
 Time:        7.774s
 Ran all test suites.
 Done in 16.22s.
+
+
+
+>yarn test
+
+yarn run v1.21.1
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\run-length-encoding\node_modules\.bin\tsc --noEmit -p .
+ PASS  ./run-length-encoding.test.ts (8.129s)
+  run-length encode a string
+    √ empty string (9ms)
+    √ single characters only are encoded without count (2ms)
+    √ string with no single characters (1ms)
+    √ single characters mixed with repeated characters (1ms)
+    √ multiple whitespace mixed in string (2ms)
+    √ lowercase characters (6ms)
+  run-length decode a string
+    √ empty string (2ms)
+    √ single characters only (1ms)
+    √ string with no single characters (3ms)
+    √ single characters with repeated characters (12ms)
+    √ multiple whitespace mixed in string (12ms)
+    √ lower case string (2ms)
+  encode and then decode
+    √ encode followed by decode gives original string (2ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        10.072s
+Ran all test suites.
+Done in 17.44s.
