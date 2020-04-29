@@ -9,14 +9,14 @@ export default class QueenAttack implements IPosition{
   readonly white: number[]
 
   constructor(position: IPosition) {
-    
+
     const { black: [bfile, brank],
             white: [wfile, wrank] } = position
-    
+
     this.black = position.black
     this.white = position.white
-    
-    if (bfile == wfile && brank == wrank) {
+
+    if (bfile === wfile && brank === wrank) {
       throw new Error("Queens cannot share the same space")
     }
   }
@@ -28,7 +28,7 @@ export default class QueenAttack implements IPosition{
 
     board[bfile][brank] = 'B';
     board[wfile][wrank] = 'W';
-    
+
     return board.map(row => row.join(' ')).join('\n') + "\n"
   }
 
@@ -37,7 +37,7 @@ export default class QueenAttack implements IPosition{
     const [bfile, brank] = this.black
     const dfile = Math.abs(wfile - bfile)
     const drank = Math.abs(wrank - brank)
-    
+
     return dfile === 0 || drank === 0 || dfile / drank == 1 
   }
 }
