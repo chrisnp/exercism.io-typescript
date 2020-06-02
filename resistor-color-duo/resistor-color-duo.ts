@@ -1,24 +1,24 @@
-const COLORS: string[] = ["black",
-                          "brown",
-                          "red",
-                          "orange",
-                          "yellow",
-                          "green",
-                          "blue",
-                          "violet",
-                          "grey",
-                          "white"]
+const COLORS: string[] =
+  ["black", "brown", "red", "orange", "yellow",
+   "green", "blue", "violet", "grey", "white"];
+
+const TWO_COLORS: string =
+    "At least two colors need to be present";
 
 export class ResistorColor {
   private colors: string[];
 
   constructor(colors: string[]) {
     this.colors = colors;
-    if (this.colors.length !== 2) {
-      throw new Error("not enough colors");
+    if (this.colors.length < 2) {
+      throw new Error(TWO_COLORS);
+    }
+    if (this.colors.length > 2) {
+      this.colors = [this.colors[0],
+                     this.colors[1]];
     }
   }
-  
+
   value = (): number => {
     let c1: number =
         COLORS.indexOf(this.colors[0]);
@@ -26,5 +26,4 @@ export class ResistorColor {
         COLORS.indexOf(this.colors[1]);
     return 10 * c1 + c2;
   }
-
 }
