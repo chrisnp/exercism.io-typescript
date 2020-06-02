@@ -2,7 +2,7 @@ const COLORS: string[] =
   ["black", "brown", "red", "orange", "yellow",
    "green", "blue", "violet", "grey", "white"];
 
-const TWO_COLORS: string =
+const LESS_THAN_TWO_COLORS: string =
     "At least two colors need to be present";
 
 export class ResistorColor {
@@ -11,7 +11,7 @@ export class ResistorColor {
   constructor(colors: string[]) {
     this.colors = colors;
     if (this.colors.length < 2) {
-      throw new Error(TWO_COLORS);
+      throw new Error(LESS_THAN_TWO_COLORS);
     }
     if (this.colors.length > 2) {
       this.colors = [this.colors[0],
