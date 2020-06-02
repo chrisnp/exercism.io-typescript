@@ -1,0 +1,22 @@
+>yarn test
+
+yarn run v1.21.1
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\resistor-color-duo\node_modules\.bin\tsc --noEmit -p .
+
+ PASS  ./resistor-color-duo.test.ts (14.825s)
+  Resistor Colors
+    √ Brown and black (18ms)
+    √ Blue and grey (3ms)
+    √ Yellow and violet (3ms)
+    √ Orange and orange (2ms)
+    √ Ignore additional colors (2ms)
+    √ Throws error when not enough colors (25ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        19.725s
+Ran all test suites.
+Done in 25.82s.
