@@ -1,21 +1,32 @@
-const COLORS: string[] =
+type COLOR = "black"|
+             "brown"|
+             "red"|
+             "orange"|
+             "yellow"|
+             "green"|
+             "blue"|
+             "violet"|
+             "grey"|
+             "white";
+
+const COLORS: COLOR[] =
   ["black", "brown", "red", "orange", "yellow",
    "green", "blue", "violet", "grey", "white"];
 
-const LESS_THAN_TWO_COLORS: string =
+const LESS_THAN_TWO_COLORS =
     "At least two colors need to be present";
 
 export class ResistorColor {
-  private colors: string[];
+  private colors: COLOR[];
 
-  constructor(colors: string[]) {
+  constructor(colors: COLOR[]) {
     this.colors = colors;
     if (this.colors.length < 2) {
       throw new Error(LESS_THAN_TWO_COLORS);
     }
     if (this.colors.length > 2) {
-      this.colors = [this.colors[0],
-                     this.colors[1]];
+      this.colors =
+        this.colors.filter((_,idx) => idx < 2);
     }
   }
 
