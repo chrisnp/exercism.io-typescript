@@ -24,3 +24,33 @@ Snapshots:   0 total
 Time:        6.498s
 Ran all test suites.
 Done in 14.55s.
+
+
+>yarn test
+
+yarn run v1.21.1
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...word-count.test.ts
+
+ PASS  .\word-count.test.ts
+  words()
+    √ counts one word (4ms)
+    √ counts one of each (1ms)
+    √ counts multiple occurrences (1ms)
+    √ includes punctuation
+    √ includes numbers (2ms)
+    √ normalizes to lower case
+    √ counts properly international characters (1ms)
+    √ counts multiline
+    √ counts tabs (1ms)
+    √ counts multiple spaces as one
+    √ does not count leading or trailing whitespace
+    √ handles properties that exist on Object’s prototype (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        3.214s
+Ran all test suites.
+Done in 7.13s.
