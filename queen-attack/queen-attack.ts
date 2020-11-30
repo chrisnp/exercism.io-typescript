@@ -24,12 +24,15 @@ export default class QueenAttack implements IPosition{
   toString(): string {
     const [wfile, wrank] = this.white
     const [bfile, brank] = this.black
-    const board = Array.from(Array(8), () => Array(8).fill('_'))
+    const board = 
+        Array.from(Array(8), () => Array(8).fill('_'))
 
     board[bfile][brank] = 'B';
     board[wfile][wrank] = 'W';
 
-    return board.map(row => row.join(' ')).join('\n') + "\n"
+    return board.map(row => row.join(' '))
+                .join('\n') + 
+                "\n"
   }
 
   canAttack(): boolean {
@@ -38,6 +41,6 @@ export default class QueenAttack implements IPosition{
     const dfile = Math.abs(wfile - bfile)
     const drank = Math.abs(wrank - brank)
 
-    return dfile === 0 || drank === 0 || dfile / drank == 1 
+    return dfile === 0 || drank === 0 || dfile / drank === 1
   }
 }
