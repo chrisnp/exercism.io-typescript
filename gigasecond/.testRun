@@ -15,3 +15,25 @@ Tests:       4 passed, 4 total
 Snapshots:   0 total
 Time:        7.194s
 Ran all test suites.
+
+
+>yarn test
+
+yarn run v1.21.1
+$ tsc --noEmit -p . && jest --no-cache
+
+ RUNS  ...gigasecond.test.ts
+
+ PASS  .\gigasecond.test.ts
+  Gigasecond
+    √ tells a gigasecond anniversary since midnight (4ms)
+    √ tells the anniversary is next day when you are born at night
+    √ even works before 1970 (beginning of Unix epoch ) (1ms)
+    √ make sure calling "date" doesn't mutate value
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        2.913s
+Ran all test suites.
+Done in 7.16s.
