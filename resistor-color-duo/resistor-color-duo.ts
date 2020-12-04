@@ -1,40 +1,36 @@
-type COLOR = "black"|
-             "brown"|
-             "red"|
-             "orange"|
-             "yellow"|
-             "green"|
-             "blue"|
-             "violet"|
-             "grey"|
-             "white";
+type Color = "black"|"brown"|"red"|"orange"|
+             "yellow"|"green"|"blue"|"violet"|
+             "grey"|"white";
 
-const COLORS: COLOR[] =
-  ["black", "brown", "red", "orange", "yellow",
-   "green", "blue", "violet", "grey", "white"];
+const Colors: {[c in Color]: number} = {
+                black: 0,
+                brown: 1,
+                red: 2,
+                orange: 3,
+                yellow: 4,
+                green: 5,
+                blue: 6,
+                violet: 7,
+                grey: 8,
+                white: 9,
+      };
 
-const LESS_THAN_TWO_COLORS =
+const LESS_THAN_TWO_COLORS : string =
     "At least two colors need to be present";
 
 export class ResistorColor {
-  private colors: COLOR[];
+  private colors: Color[];
 
-  constructor(colors: COLOR[]) {
-    this.colors = colors;
-    if (this.colors.length < 2) {
+  constructor(colors: Color[]) {
+    if (colors.length < 2) {
       throw new Error(LESS_THAN_TWO_COLORS);
     }
-    if (this.colors.length > 2) {
-      this.colors =
-        this.colors.filter((_,idx) => idx < 2);
-    }
+    this.colors = colors.slice(0, 2);
   }
 
   value = (): number => {
-    let c1: number =
-        COLORS.indexOf(this.colors[0]);
-    let c2: number =
-        COLORS.indexOf(this.colors[1]);
+    let [c1, c2] = this.colors.map(c =>
+                                   Colors[c]);
     return 10 * c1 + c2;
   }
 }
