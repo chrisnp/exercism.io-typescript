@@ -27,3 +27,38 @@ Snapshots:   0 total
 Time:        5.895s
 Ran all test suites.
 Done in 11.04s.
+
+
+
+>npm test
+
+> @exercism/typescript@ test ~\exercism\typescript\triangle
+> yarn lint:types && jest --no-cache
+
+yarn run v1.21.1
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\triangle\node_modules\.bin\tsc --noEmit -p .
+ PASS  ./triangle.test.ts
+  Triangle
+    √ equilateral triangles have equal sides (5 ms)
+    √ larger equilateral triangles also have equal sides
+    √ isosceles triangles have last two sides equal
+    √ isosceles trianges have first and last sides equal (1 ms)
+    √ isosceles triangles have two first sides equal
+    √ isosceles triangles have in fact exactly two sides equal (1 ms)
+    √ scalene triangles have no equal sides
+    √ scalene triangles have no equal sides at a larger scale too (1 ms)
+    √ scalene triangles have no equal sides in descending order either
+    √ very small triangles are legal (1 ms)
+    √ test triangles with no size are illegal (4 ms)
+    √ triangles with negative sides are illegal (1 ms)
+    √ triangles violating triangle inequality are illegal (1 ms)
+    √ triangles violating triangle inequality are illegal 2 (1 ms)
+    √ triangles violating triangle inequality are illegal 3 (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        4.589 s
+Ran all test suites.
+Done in 9.49s.
