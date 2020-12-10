@@ -9,22 +9,28 @@ export default class SimpleCipher {
     constructor(key?: string) {
 
         if (key === undefined) {
-            key = this.generateKey();
+            key = this.generateKey()
         }
-        else if (key.length === 0 || key.match(/[^a-z]/)) {
-            throw new Error('Bad key');
+        else if (key.length === 0 ||
+                 key.match(/[^a-z]/)) {
+            throw new Error('Bad key')
         }
         this.key = key
     }
 
-    private xShift(key: string, input: string, sign: number) {
+    private xShift(key: string,
+                   input: string,
+                   sign: number) {
         return [...input]
                .reduce((output, letr, i) => {
                    const offset =
                        sign * ALPHA
-                              .indexOf(key[mod(i, key.length)])
+                              .indexOf(
+                                  key[mod(i, key.length)]
+                               )
                    output +=
-                       ALPHA[mod(ALPHA.indexOf(letr) + offset,
+                       ALPHA[mod(ALPHA.indexOf(letr)
+                                 + offset,
                                  ALPHA.length)]
                     return output
                 }, '')
@@ -33,7 +39,8 @@ export default class SimpleCipher {
     private generateKey() {
         return Array(...Array(100))
                .map(() =>
-                   ALPHA[Math.floor(Math.random() * ALPHA.length)])
+                    ALPHA[Math.floor(Math.random() *
+                                     ALPHA.length)])
                .join('')
     }
 
