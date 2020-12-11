@@ -22,3 +22,32 @@ Snapshots:   0 total
 Time:        4.165s
 Ran all test suites.
 Done in 9.26s.
+
+
+>yarn test
+
+yarn run v1.21.1
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\diffie-hellman\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ...diffie-hellman.test.ts
+ PASS  ./diffie-hellman.test.ts
+  diffie-hellman
+    √ throws an error if the constructor arguments are out of range (10 ms)
+    √ throws an error if the constructor arguments are not prime (1 ms)
+    √ throws an error if private key is negative (1 ms)
+    √ throws an error if private key is zero (2 ms)
+    √ throws an error if private key is one (1 ms)
+    √ throws an error if private key equals the modulus parameter p (1 ms)
+    √ throws an error if private key is greater than the modulus parameter p (1 ms)
+    √ when given a private key, returns the correct public one (1 ms)
+    √ when given a different private key, returns the correct public one
+    √ can generate a shared secret from our private key and their public key (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        5.484 s
+Ran all test suites.
+Done in 16.78s.
