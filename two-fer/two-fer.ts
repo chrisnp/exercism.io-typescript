@@ -1,6 +1,4 @@
-export default class TwoFer {
+const twoFer = (name?: string): string =>
+    `One for ${name || 'you'}, one for me.`
 
-  static twoFer( name?: string ) {
-    return `One for ${name || 'you'}, one for me.`;
-  }
-}
+export default twoFer
