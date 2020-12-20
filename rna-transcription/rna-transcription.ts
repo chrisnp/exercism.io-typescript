@@ -5,7 +5,7 @@ const TRANSL: { [nucl: string]: string } = {
     "A": "U"
 };
 
-class Transcriptor {
+export default class Transcriptor {
 
     toRna(dna: string): string {
         if (/[^ACGT]/.test(dna)) {
@@ -19,5 +19,3 @@ class Transcriptor {
         }
     }
 }
-
-export default Transcriptor;
