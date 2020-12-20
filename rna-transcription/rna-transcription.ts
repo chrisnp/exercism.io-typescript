@@ -1,4 +1,4 @@
-const TRANSL: { [key: string]: string } = {
+const TRANSL: { [nucl: string]: string } = {
     "G": "C",
     "C": "G",
     "T": "A",
@@ -12,7 +12,10 @@ class Transcriptor {
             throw new
                 Error("Invalid input DNA.");
         } else {
-            return dna.split("").map((n) => TRANSL[n]).join("");
+            return dna
+                   .split("")
+                   .map((n) => TRANSL[n])
+                   .join("");
         }
     }
 }
