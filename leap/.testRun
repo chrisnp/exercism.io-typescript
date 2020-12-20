@@ -100,3 +100,17 @@ Snapshots:   0 total
 Time:        3.145s
 Ran all test suites.
 Done in 7.85s.
+
+
+>yarn test
+
+yarn run v1.21.1
+$ tsc --noEmit -p . && jest --no-cache
+
+Test Suites: 1 skipped, 0 of 1 total
+Tests:       8 skipped, 8 total
+Snapshots:   0 total
+Time:        2.853s
+Ran all test suites.
+Done in 7.30s.
+
