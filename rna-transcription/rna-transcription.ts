@@ -12,10 +12,7 @@ class Transcriptor {
             throw new
                 Error("Invalid input DNA.");
         } else {
-            return dna
-                   .split("")
-                   .map((n) => TRANSL[n])
-                   .join("");
+            return dna.split("").map((n) => TRANSL[n]).join("");
         }
     }
 }
