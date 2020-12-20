@@ -1,7 +1,3 @@
-type Color = "black"|"brown"|"red"|"orange"|
-             "yellow"|"green"|"blue"|"violet"|
-             "grey"|"white";
-
 enum Colors {
         black = 0,
         brown,
@@ -14,6 +10,8 @@ enum Colors {
         grey,
         white
 }
+
+type Color = keyof typeof Colors;
 
 const LESS_THAN_TWO_COLORS : string =
     "At least two colors need to be present";
