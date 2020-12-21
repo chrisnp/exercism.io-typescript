@@ -1,8 +1,8 @@
-const TRANSL: { [nucl: string]: string } = {
-    "G": "C",
-    "C": "G",
-    "T": "A",
-    "A": "U"
+const TRANSCRIBE: { [nucl: string]: string } = {
+    G: "C",
+    C: "G",
+    T: "A",
+    A: "U"
 };
 
 export default class Transcriptor {
@@ -14,7 +14,7 @@ export default class Transcriptor {
         } else {
             return dna
                    .split("")
-                   .map((n) => TRANSL[n])
+                   .map((n) => TRANSCRIBE[n])
                    .join("");
         }
     }
