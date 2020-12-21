@@ -11,11 +11,10 @@ export default class Transcriptor {
         if (/[^ACGT]/.test(dna)) {
             throw new
                 Error("Invalid input DNA.");
-        } else {
-            return dna
-                   .split("")
-                   .map((n) => TRANSCRIBE[n])
-                   .join("");
         }
+        return dna
+               .split("")
+               .map((n) => TRANSCRIBE[n])
+               .join("");
     }
 }
