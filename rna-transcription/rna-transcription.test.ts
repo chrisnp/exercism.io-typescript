@@ -20,20 +20,15 @@ describe('Transcriptor', () => {
   })
 
   it('transcribes all dna nucleotides to their rna complements', () => {
-    expect(transcriptor.toRna('ACGTGGTCTTAA'))
-      .toEqual('UGCACCAGAAUU')
+    expect(transcriptor.toRna('ACGTGGTCTTAA')).toEqual('UGCACCAGAAUU')
   })
 
   it('correctly handles invalid input', () => {
-    expect(() => transcriptor.toRna('U')).toThrowError(
-      'Invalid input DNA.'
-    )
+    expect(() => transcriptor.toRna('U')).toThrowError('Invalid input DNA.')
   })
 
   it('correctly handles completely invalid input', () => {
-    expect(() => transcriptor.toRna('XXX')).toThrowError(
-      'Invalid input DNA.'
-    )
+    expect(() => transcriptor.toRna('XXX')).toThrowError('Invalid input DNA.')
   })
 
   it('correctly handles partially invalid input', () => {
@@ -41,5 +36,4 @@ describe('Transcriptor', () => {
       'Invalid input DNA.'
     )
   })
-
 })
