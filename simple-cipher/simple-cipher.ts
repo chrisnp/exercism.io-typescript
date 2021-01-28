@@ -1,6 +1,8 @@
-const ALPHA = 'abcdefghijklmnopqrstuvwxyz'
+const ALPHA = 
+    'abcdefghijklmnopqrstuvwxyz'
 
-const mod = (x: number, y: number) => (x % y + y) % y
+const mod = (x: number, y: number) =>
+                        (x % y + y) % y
 
 export default class SimpleCipher {
 
@@ -18,18 +20,17 @@ export default class SimpleCipher {
         this.key = key
     }
 
-    private xShift(key: string,
+    private dShift(key: string,
                    input: string,
-                   sign: number) {
+                   direction: number) {
         return [...input]
-               .reduce((output, letr, i) => {
+               .reduce((output, ch, i) => {
                    const offset =
-                       sign * ALPHA
-                              .indexOf(
-                                  key[mod(i, key.length)]
-                               )
+                       direction *
+                       ALPHA
+                       .indexOf(key[mod(i, key.length)])
                    output +=
-                       ALPHA[mod(ALPHA.indexOf(letr)
+                       ALPHA[mod(ALPHA.indexOf(ch)
                                  + offset,
                                  ALPHA.length)]
                     return output
@@ -45,10 +46,10 @@ export default class SimpleCipher {
     }
 
     encode(plaintext: string ): string {
-        return this.xShift(this.key, plaintext, 1)
+        return this.dShift(this.key, plaintext, 1)
     }
 
     decode(ciphertext: string): string {
-        return this.xShift(this.key, ciphertext, -1)
+        return this.dShift(this.key, ciphertext, -1)
     }
 }
