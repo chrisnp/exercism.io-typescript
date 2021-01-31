@@ -1,0 +1,21 @@
+>yarn test
+
+yarn run v1.21.1
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\etl\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./etl.test.ts
+ PASS  ./etl.test.ts
+  Transform
+    √ transforms one value (4 ms)
+    √ transforms more values (1 ms)
+    √ transforms more keys (1 ms)
+    √ transforms a full dataset (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        4.061 s
+Ran all test suites.
+Done in 14.98s.
