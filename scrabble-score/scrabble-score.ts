@@ -15,6 +15,6 @@ export default (word?: string): number => {
     }
     return [...word.toUpperCase()]
            .reduce((score, letter) => {
-              return score + (letterVal[letter] ?? 1);
+              return score + (letterVal[letter] || 1);
             }, 0);
 };
