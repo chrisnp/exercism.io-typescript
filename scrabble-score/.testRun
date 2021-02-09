@@ -1,0 +1,23 @@
+>yarn test
+
+yarn run v1.21.1
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\scrabble-score\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./scrabble-score.test.ts
+ PASS  ./scrabble-score.test.ts (7.453 s)
+  Scrabble
+    √ scores an empty word as zero (14 ms)
+    √ scores a null as zero (2 ms)
+    √ scores a very short word (3 ms)
+    √ scores the word by the number of letters (1 ms)
+    √ scores more complicated words with more (1 ms)
+    √ scores case insensitive words (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        12.037 s
+Ran all test suites.
+Done in 42.98s.
