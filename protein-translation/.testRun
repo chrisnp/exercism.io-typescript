@@ -1,0 +1,40 @@
+>yarn test
+
+yarn run v1.21.1
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\protein-translation\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./protein-translation.test.ts
+ PASS  ./protein-translation.test.ts
+  Translate input RNA sequences into proteins
+    √ Methionine RNA sequence (5 ms)
+    √ Phenylalanine RNA sequence 1 (1 ms)
+    √ Phenylalanine RNA sequence 2
+    √ Leucine RNA sequence 1 (1 ms)
+    √ Leucine RNA sequence 2
+    √ Serine RNA sequence 1
+    √ Serine RNA sequence 2 (1 ms)
+    √ Serine RNA sequence 3
+    √ Serine RNA sequence 4 (1 ms)
+    √ Tyrosine RNA sequence 1
+    √ Tyrosine RNA sequence 2 (1 ms)
+    √ Cysteine RNA sequence 1
+    √ Cysteine RNA sequence 2 (1 ms)
+    √ Tryptophan RNA sequence
+    √ STOP codon RNA sequence 1 (1 ms)
+    √ STOP codon RNA sequence 2
+    √ STOP codon RNA sequence 3
+    √ Translate RNA strand into correct protein list
+    √ Translation stops if STOP codon at beginning of sequence (1 ms)
+    √ Translation stops if STOP codon at end of two-codon sequence
+    √ Translation stops if STOP codon at end of three-codon sequence (1 ms)
+    √ Translation stops if STOP codon in middle of three-codon sequence
+    √ Translation stops if STOP codon in middle of six-codon sequence (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       23 passed, 23 total
+Snapshots:   0 total
+Time:        4.493 s
+Ran all test suites.
+Done in 16.04s.

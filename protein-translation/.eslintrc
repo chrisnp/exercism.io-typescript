@@ -26,6 +26,7 @@
     "@typescript-eslint"
   ],
   "rules": {
+    // Code style not forced upon the student
     "@typescript-eslint/array-type": "off",
 
     // Prevent bugs
@@ -37,8 +38,10 @@
       }
     ],
 
+    // Code style not forced upon the student
     "@typescript-eslint/explicit-member-accessibility": "off",
 
+    // Code style not forced upon the student
     "@typescript-eslint/indent": "off",
 
     "@typescript-eslint/no-inferrable-types": [
@@ -47,8 +50,10 @@
       }
     ],
 
+    // Code style not forced upon the student
     "@typescript-eslint/member-delimiter-style": "off",
 
+    // Code style not forced upon the student
     "@typescript-eslint/no-non-null-assertion": "off",
 
      // Only disallow readonly without an access modifier
