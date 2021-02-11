@@ -73,14 +73,12 @@ ciphertext back in to the original message:
 ```
 
 ## Setup
-
 Go through the setup instructions for TypeScript to install the necessary
 dependencies:
 
 [https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
 
 ## Requirements
-
 Install assignment dependencies:
 
 ```bash
@@ -88,7 +86,6 @@ $ yarn install
 ```
 
 ## Making the test suite pass
-
 Execute the tests with:
 
 ```bash
@@ -101,10 +98,8 @@ Once you get a test passing, you can enable the next one by changing `xit` to
 `it`.
 
 ## Source
-
 J Dalbey's Programming Practice problems [http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html](http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html)
 
 ## Submitting Incomplete Solutions
-
 It's possible to submit an incomplete solution so you can see how others have
 completed the exercise.
