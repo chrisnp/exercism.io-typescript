@@ -1,5 +1,5 @@
 const CODONS:
-  { [nucl: string]: string } = {
+  { [codon: string]: string } = {
                   AUG: "Methionine",
                   UUU: "Phenylalanine",
                   UUC: "Phenylalanine",
@@ -20,10 +20,12 @@ const CODONS:
   };
 
 export default class ProteinTranslation {
+
   static proteins(rna: string = ""): string[] {
+
     const rnaSeq: string[] = rna.match (/.../g) || [];
     const proteins: string[] =
-      rnaSeq.map (codon => 
+      rnaSeq.map (codon =>
                     CODONS[codon] || "INVALID");
 
     if ( proteins.includes("INVALID") ) {
@@ -31,6 +33,7 @@ export default class ProteinTranslation {
     }
 
     const stop: number = proteins.indexOf("STOP");
+    
     return stop > -1 ?
            proteins.slice(0, stop) :
            proteins;
