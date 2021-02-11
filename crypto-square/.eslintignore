@@ -1,3 +1,6 @@
+babel.config.js
+jest.config.js
+
 bin/*
 dist/*
 docs/*
@@ -6,5 +9,3 @@ production_node_modules/*
 test/fixtures/*
 tmp/*
 
-babel.config.js
-jest.config.js
