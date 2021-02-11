@@ -19,7 +19,7 @@ const CODONS:
                   UGA: "STOP",
   };
 
-class ProteinTranslation {
+export default class ProteinTranslation {
   static proteins(rna: string = ""): string[] {
     const rnaSeq: string[] = rna.match (/.../g) || [];
     const proteins: string[] =
