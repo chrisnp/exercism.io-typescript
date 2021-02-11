@@ -25,3 +25,33 @@ Snapshots:   0 total
 Time:        4.981 s
 Ran all test suites.
 Done in 15.84s.
+
+
+
+>yarn test
+
+yarn run v1.21.1
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\crypto-square\node_modules\.bin\tsc --noEmit -p .
+
+ PUNS  ./crypto-square.test.ts
+ PASS  ./crypto-square.test.ts
+  Crypto
+    √ normalize strange characters (4 ms)
+    √ normalize numbers (1 ms)
+    √ size of small square (1 ms)
+    √ size of small square with additional non-number chars
+    √ size of slightly larger square (1 ms)
+    √ size of non-perfect square
+    √ plain text segments (1 ms)
+    √ plain text segments (1 ms)
+    √ cipher text (1 ms)
+    √ cipher text
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        3.976 s
+Ran all test suites.
+Done in 15.64s.
