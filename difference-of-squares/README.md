@@ -45,10 +45,8 @@ Once you get a test passing, you can enable the next one by changing `xit` to
 `it`.
 
 ## Source
-
 Problem 6 at Project Euler [http://projecteuler.net/problem=6](http://projecteuler.net/problem=6)
 
 ## Submitting Incomplete Solutions
-
 It's possible to submit an incomplete solution so you can see how others have
 completed the exercise.
