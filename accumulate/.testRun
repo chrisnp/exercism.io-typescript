@@ -37,3 +37,28 @@ Snapshots:   0 total
 Time:        5.839s
 Ran all test suites.
 Done in 14.26s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\accumulate\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./accumulate.test.ts
+ PASS  ./accumulate.test.ts (5.223 s)
+  accumulate()
+    √ accumulation empty (13 ms)
+    √ accumulate squares (4 ms)
+    √ accumulate upcases (1 ms)
+    √ accumulate reversed strings (2 ms)
+    √ accumulate recursively (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        8.911 s
+Ran all test suites.
+Done in 15.78s.
