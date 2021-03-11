@@ -1,4 +1,4 @@
-export default class CollatzConjecture {
+class CollatzConjecture {
 
     static steps(num: number) {
 
@@ -14,7 +14,8 @@ export default class CollatzConjecture {
                    iter(n / 2, s + 1) :
                    iter((3 * n) + 1, s + 1)
         }
-
         return iter(num, 0)
     }
 }
+
+export default CollatzConjecture
