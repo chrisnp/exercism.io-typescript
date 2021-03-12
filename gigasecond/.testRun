@@ -37,3 +37,26 @@ Snapshots:   0 total
 Time:        2.913s
 Ran all test suites.
 Done in 7.16s.
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\gigasecond\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./gigasecond.test.ts 
+ PASS  ./gigasecond.test.ts (7.671 s)
+  Gigasecond
+    √ tells a gigasecond anniversary since midnight (20 ms)
+    √ tells the anniversary is next day when you are born at night (17 ms)
+    √ even works before 1970 (beginning of Unix epoch ) (3 ms)
+    √ make sure calling "date" doesn't mutate value (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        13.307 s
+Ran all test suites.
+Done in 41.06s.
