@@ -3,19 +3,19 @@ const squareSize =
         Math.ceil(Math.sqrt(str.length));
 
 const nub =
-    (input: string, chunkSize: number | undefined): string[] => {
+    (input: string, chunks: number | undefined): string[] => {
         const output: string[] = [];
         let listchars: string[] = [...input];
         while (listchars.length > 0) {
-            output.push(listchars.splice(0, chunkSize).join(""));
+            output.push(listchars.splice(0, chunks).join(""));
         }
         return output;
     };
 
 const cipherText =
-    (square: string | any[], chunkSize: number): string => {
+    (square: string | any[], chunksize: number): string => {
         let cipher: string = "";
-        for (let i = 0; i < chunkSize; i++) {
+        for (let i = 0; i < chunksize; i++) {
             for (let j = 0; j < square.length; j++) {
                 cipher += square[j][i] || "";
             }
