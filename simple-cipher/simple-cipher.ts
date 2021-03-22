@@ -40,8 +40,7 @@ export default class SimpleCipher {
     private generateKey() {
         return Array(...Array(100))
                .map(() =>
-                    ALPHA[Math.floor(Math.random() *
-                                     ALPHA.length)])
+                    ALPHA[~~(Math.random() * ALPHA.length)])
                .join('')
     }
 
