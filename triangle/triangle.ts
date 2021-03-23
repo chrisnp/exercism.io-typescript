@@ -15,7 +15,8 @@ export default class Triangle {
         switch (distinctSides) {
             case 1: return 'equilateral'
             case 2: return 'isosceles'
-            default: return 'scalene'
+            case 3: return 'scalene'
+            default: return 'degenerate'
         }
     }
 
