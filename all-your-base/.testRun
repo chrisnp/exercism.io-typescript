@@ -114,3 +114,45 @@ Snapshots:   0 total
 Time:        5.114s
 Ran all test suites.
 Done in 12.28s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\all-your-base\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./all-your-base.test.ts 
+ PASS  ./all-your-base.test.ts (4.457s)
+  Converter
+    √ single bit one to decimal (11ms)
+    √ binary to single decimal (2ms)
+    √ single decimal to binary (2ms)
+    √ binary to multiple decimal (2ms)
+    √ decimal to binary (2ms)
+    √ trinary to hexadecimal (1ms)
+    √ hexadecimal to trinary (1ms)
+    √ 15-bit integer (1ms)
+    √ empty list (13ms)
+    √ single zero (2ms)
+    √ multiple zeros (2ms)
+    √ leading zeros (2ms)
+    √ negative digit (2ms)
+    √ invalid positive digit (2ms)
+    √ first base is one (2ms)
+    √ second base is one (2ms)
+    √ first base is zero (2ms)
+    √ second base is zero (3ms)
+    √ first base is negative (2ms)
+    √ second base is negative (2ms)
+    √ both bases are negative (2ms)
+    √ wrong output_base base not integer (2ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       22 passed, 22 total
+Snapshots:   0 total
+Time:        7.419s
+Ran all test suites.
+Done in 19.99s.

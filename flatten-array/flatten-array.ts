@@ -1,7 +1,9 @@
-export default class FlattenArray {
+class FlattenArray {
 
     static flatten(array: any[]): any[] {
+
         const flat: any[] = []
+        
         array.forEach((item) => {
             if (!Array.isArray(item)) {
                 if (item !== null && item !== undefined) {
@@ -12,6 +14,9 @@ export default class FlattenArray {
                         flat.push(i))
             }
         })
+
         return flat
     }
 }
+
+export default FlattenArray

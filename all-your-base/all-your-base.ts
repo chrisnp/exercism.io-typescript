@@ -1,7 +1,6 @@
 function validBase(base: number) {
     return  typeof(base) === 'number' &&
-            Math.floor(base) === base &&
-            base > 1
+            ~~base === base && base > 1
 }
 
 function validInput(input: number[], fromBase: number) {
@@ -34,7 +33,7 @@ export default class Converter {
 
         do {
             digits.unshift(num % toBase)
-            num = Math.floor(num / toBase)
+            num = ~~(num / toBase)
         } while (num > 0)
 
         return digits
