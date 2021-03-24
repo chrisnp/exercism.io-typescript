@@ -13,20 +13,33 @@ export default class Triangle {
         const distinctSides = 
             (new Set(this.sides)).size
         switch (distinctSides) {
-            case 1: return 'equilateral'
-            case 2: return 'isosceles'
-            case 3: return 'scalene'
-            default: return 'degenerate'
+            case 1:  return 'equilateral'
+            case 2:  return 'isosceles'
+            default: return 'scalene'
         }
     }
 
     throwWhatever() {
-        if (this.sides.some((side) =>
-                                side <= 0)
-            ||
-            this.sides[2] >
-            (this.sides[0] + this.sides[1])) {
+        const triangleInequality = 
+            (sides: number[]) => 
+                2 * Math.max(...sides) <
+                sides.reduce((sum, s) => sum + s, 0);
+        const no_zero_side = 
+            (sides: number[]) => 
+                sides.some((s) => s <= 0);
+        if (triangleInequality(this.sides) || 
+            no_zero_side(this.sides)) 
+        {
             throw new Error('Illegal')
         }
     }
+        // externalize error conditions 
+        // if (this.sides.some((side) =>
+        //                         side <= 0)
+        //     ||
+        //     this.sides[2] >
+        //     (this.sides[0] + this.sides[1])) {
+        //     throw new Error('Illegal')
+        // }
+    // }
 }
