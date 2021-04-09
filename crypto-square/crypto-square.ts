@@ -2,7 +2,7 @@ const squareSize =
     (str: string): number =>
         Math.ceil(Math.sqrt(str.length));
 
-const nub =
+const segment =
     (input: string, chunks: number | undefined): string[] => {
         const output: string[] = [];
         let listchars: string[] = [...input];
@@ -45,7 +45,7 @@ export default class Crypto {
     }
 
     normalizeCiphertext (): string {
-        return nub(this.ciphertext(), this.squareSize)
+        return segment(this.ciphertext(), this.squareSize)
                .join(" ");
     }
 
@@ -54,7 +54,7 @@ export default class Crypto {
     }
 
     plaintextSegments (): string[] {
-        return nub(this.normalizePlaintext(),
+        return segment(this.normalizePlaintext(),
                    this.squareSize);
     }
 }
