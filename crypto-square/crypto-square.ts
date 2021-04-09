@@ -1,6 +1,6 @@
 const squareSize =
     (str: string): number =>
-        ~~(Math.sqrt(str.length));
+        Math.ceil(Math.sqrt(str.length));
 
 const segment =
     (input: string, chunks: number | undefined): string[] => {
