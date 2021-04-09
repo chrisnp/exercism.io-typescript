@@ -4,7 +4,8 @@ export default class MatchingBrackets {
 
   constructor(input: string) {
     this.justTheBrackets = 
-        input.replace(/[^\[\]|\(\)|\{\}]/g, '')
+        input
+        .replace(/[^\[\]|\(\)|\{\}]/g, '')
   }
 
   isPaired(): Boolean {
@@ -15,7 +16,8 @@ export default class MatchingBrackets {
       matchAndStrip = 
             allBrackets
       allBrackets = 
-          matchAndStrip.replace(/\[\]|\(\)|\{\}/g, '')
+          matchAndStrip
+          .replace(/\[\]|\(\)|\{\}/g, '')
     } while (allBrackets !== matchAndStrip)
     return allBrackets === ''
   }
