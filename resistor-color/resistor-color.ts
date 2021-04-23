@@ -9,7 +9,8 @@ export const COLORS = [ 'black',
                         'grey', 
                         'white' ];
 
-export const colorCode = (color: string) => 
-              COLORS.indexOf(color);
+export const colorCode = 
+             (color: string): number => 
+                    COLORS.indexOf(color);
 
 
