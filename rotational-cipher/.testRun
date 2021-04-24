@@ -51,3 +51,33 @@ Snapshots:   0 total
 Time:        10.128s
 Ran all test suites.
 Done in 14.37s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\rotational-cipher\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./rotational-cipher.test.ts
+ PASS  ./rotational-cipher.test.ts (6.39 s)
+  RotationalCipher
+    √ rotate a by 1 (14 ms)
+    √ rotate a by 26, same output as input (1 ms)
+    √ rotate a by 0, same output as input (1 ms)
+    √ rotate m by 13 (2 ms)
+    √ rotate n by 13 with wrap around alphabet (1 ms)
+    √ rotate capital letters (1 ms)
+    √ rotate spaces (2 ms)
+    √ rotate numbers (1 ms)
+    √ rotate punctuation (1 ms)
+    √ rotate all letters (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        11.132 s
+Ran all test suites.
+Done in 19.43s.
