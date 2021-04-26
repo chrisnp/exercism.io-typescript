@@ -1,4 +1,4 @@
-export default class Words {
+class Words {
 
   constructor () {}
 
@@ -13,3 +13,5 @@ export default class Words {
                                new Map())
   }
 }
+
+export default Words
