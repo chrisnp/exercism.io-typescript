@@ -55,3 +55,35 @@ Snapshots:   0 total
 Time:        3.165s
 Ran all test suites.
 Done in 7.63s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\strain\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./strain.test.ts
+ PASS  ./strain.test.ts (3.623 s)
+  strain
+    √ keeps on empty array returns empty array (7 ms)
+    √ keeps everything  (2 ms)
+    √ keeps first and last (4 ms)
+    √ keeps neither first nor last (5 ms)
+    √ keeps strings (2 ms)
+    √ keeps arrays (3 ms)
+    √ empty discard (2 ms)
+    √ discards nothing (2 ms)
+    √ discards first and last (1 ms)
+    √ discards neither first nor last (1 ms)
+    √ discards strings (2 ms)
+    √ discards arrays (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        8.23 s
+Ran all test suites.
+Done in 37.46s.
