@@ -41,6 +41,7 @@ export default class QueenAttack implements IPosition{
     const dfile = Math.abs(wfile - bfile)
     const drank = Math.abs(wrank - brank)
 
-    return dfile === 0 || drank === 0 || dfile / drank === 1
+    return dfile * drank === 0 || 
+           dfile / drank === 1
   }
 }
