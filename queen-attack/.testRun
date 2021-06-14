@@ -82,3 +82,34 @@ Snapshots:   0 total
 Time:        9.02s
 Ran all test suites.
 Done in 13.14s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\queen-attack\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./queen-attack.test.ts
+ PASS  ./queen-attack.test.ts
+  Queens
+    √ initialized with specific placement (6 ms)
+    √ cannot occupy the same space (8 ms)
+    √ toString representation
+    √ queens cannot attack
+    √ queens can attack when they are on the same row (1 ms)
+    √ queens can attack when they are on the same column (1 ms)
+    √ queens can attack diagonally
+    √ queens can attack another diagonally (1 ms)
+    √ queens can attack yet another diagonally
+    √ queens can attack on a north-east/south-west diagonal (1 ms)
+    √ queens can attack on another ne/sw diagonal
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        4.005 s
+Ran all test suites.
+Done in 14.36s.
