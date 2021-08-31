@@ -1,0 +1,22 @@
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\nucleotide-count\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./nucleotide-count.test.ts
+ PASS  ./nucleotide-count.test.ts
+  count all nucleotides in a strand
+    √ empty strand (5 ms)
+    √ can count one nucleotide in single-character input (1 ms)
+    √ strand with repeated nucleotide (1 ms)
+    √ strand with multiple nucleotides
+    √ strand with invalid nucleotides (10 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        4.698 s
+Ran all test suites.
+Done in 9.20s.
