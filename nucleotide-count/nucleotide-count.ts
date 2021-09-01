@@ -1,6 +1,3 @@
-// const getKeyValue = 
-//   <T, K extends keyof T>(obj: T, key: K): T[K] => obj[key]
-
 class NucleotideCount {
 
   static nucleotideCounts(dna: string) {
@@ -11,7 +8,7 @@ class NucleotideCount {
        throw new Error("Invalid nucleotide in strand")
     }
 
-    const nuCounts  = 
+    const count = 
       [...strand].reduce((counts, nucleotide) =>
       {   
           if (nucleotide) {
@@ -21,10 +18,10 @@ class NucleotideCount {
       }, 
       {A: 0, C: 0, G: 0, T: 0})
 
-      return {"A": nuCounts['A'],
-              "C": nuCounts['C'],
-              "G": nuCounts['G'],
-              "T": nuCounts['T']}
+      return {A: count['A'],
+              C: count['C'],
+              G: count['G'],
+              T: count['T']}
 
   }
 }
