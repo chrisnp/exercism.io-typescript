@@ -20,3 +20,53 @@ Snapshots:   0 total
 Time:        4.698 s
 Ran all test suites.
 Done in 9.20s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\nucleotide-count\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./nucleotide-count.test.ts
+ PASS  ./nucleotide-count.test.ts (6.416 s)
+  count all nucleotides in a strand
+    √ empty strand (14 ms)
+    √ can count one nucleotide in single-character input (2 ms)
+    √ strand with repeated nucleotide (2 ms)
+    √ strand with multiple nucleotides (2 ms)
+    √ strand with invalid nucleotides (15 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        11.428 s
+Ran all test suites.
+Done in 19.42s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\nucleotide-count\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./nucleotide-count.test.ts
+ PASS  ./nucleotide-count.test.ts
+  count all nucleotides in a strand
+    √ empty strand (7 ms)
+    √ can count one nucleotide in single-character input (1 ms)
+    √ strand with repeated nucleotide
+    √ strand with multiple nucleotides (1 ms)
+    √ strand with invalid nucleotides (24 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        4.283 s
+Ran all test suites.
+Done in 22.58s.
