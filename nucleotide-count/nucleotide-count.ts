@@ -1,16 +1,13 @@
-class NucleotideCount {
-
-  static nucleotideCounts(dna: string) {
-
-    let strand = dna || ""
-      
-    if (strand.match(/[^ACGT]/g)) {
-       throw new Error("Invalid nucleotide in strand")
-    }
+export const nucleotideCounts = (strand: string) => {
 
     const count = 
-      [...strand].reduce((counts, nucleotide) => {   
+      [...strand].reduce((counts, nucleotide) => {
+          if (!(nucleotide in counts)) {
+            throw new Error("Invalid nucleotide in strand")
+          }
+          else {   
           counts[nucleotide]++
+          }
           return counts
       }, 
       {A: 0, C: 0, G: 0, T: 0})
@@ -19,8 +16,4 @@ class NucleotideCount {
               C: count['C'],
               G: count['G'],
               T: count['T']}
-
-  }
 }
-
-export default NucleotideCount
