@@ -1,0 +1,25 @@
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\space-age\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./space-age.test.ts (5.24 s)
+ PASS  ./space-age.test.ts (5.24 s)
+  Space Age
+    √ age on Earth (6 ms)
+    √ age on Mercury (1 ms)
+    √ age on Venus (1 ms)
+    √ age on Mars (1 ms)
+    √ age on Jupiter (1 ms)
+    √ age on Saturn (1 ms)
+    √ age on Uranus
+    √ age on Neptune
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        5.513 s
+Ran all test suites.
+Done in 23.08s.
