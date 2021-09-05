@@ -1,0 +1,41 @@
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\bob\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./bob.test.ts
+ PASS  ./bob.test.ts
+  Bob
+    √ stating something (11 ms)
+    √ shouting (2 ms)
+    √ shouting gibberish (1 ms)
+    √ asking a question (1 ms)
+    √ asking a numeric question (1 ms)
+    √ asking gibberish (2 ms)
+    √ talking forcefully (5 ms)
+    √ using acronyms in regular speech (5 ms)
+    √ forceful question (2 ms)
+    √ shouting numbers (1 ms)
+    √ no letters (3 ms)
+    √ question with no letters (1 ms)
+    √ shouting with special characters (3 ms)
+    √ shouting with no exclamation mark
+    √ statement containing question mark
+    √ prattling on (1 ms)
+    √ silence (1 ms)
+    √ prolonged silence (1 ms)
+    √ alternate silence (1 ms)
+    √ multiple line question (2 ms)
+    √ starting with whitespace (1 ms)
+    √ ending with whitespace (1 ms)
+    √ other whitespace (2 ms)
+    √ non-question ending with whitespace (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       24 passed, 24 total
+Snapshots:   0 total
+Time:        6.459 s
+Ran all test suites.
+Done in 13.11s.
