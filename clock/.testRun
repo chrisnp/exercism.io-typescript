@@ -1,0 +1,8 @@
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ C:\Users\Chris\exercism\typescript\clock\node_modules\.bin\tsc --noEmit -p .
+Done in 16.00s.
