@@ -1,0 +1,29 @@
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\grains\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./grains.test.ts
+ PASS  ./grains.test.ts
+  returns the number of grains on the square
+    √ 1 (5 ms)
+    √ 2
+    √ 3 (1 ms)
+    √ 4 (2 ms)
+    √ 16 (1 ms)
+    √ 32 (1 ms)
+    √ 64 (1 ms)
+    √ square 0 raises an exception (14 ms)
+    √ negative square raises an exception (2 ms)
+    √ square greater than 64 raises an exception (2 ms)
+  returns the total number of grains on the board
+    √ total
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        3.464 s
+Ran all test suites.
+Done in 12.38s.
