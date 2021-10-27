@@ -1,9 +1,16 @@
 type Classification = 'perfect' | 'abundant' | 'deficient'
 
+const range = (start: number, end: number) =>
+      new Array(end - start + 1).fill(undefined)
+                                .map((_, i) => i + start)
+
+const factors = (num: number) => 
+      range(1, Math.floor(num / 2))
+      .filter(x => num % x === 0)
+                                                            
 const aliquot = (num: number) =>
- [...Array(num - 1).keys()]
- .map(i => num % (i + 1) !== 0 ? 0 : i + 1)
- .reduce((acc:number, i: number) => acc + i, 0)
+      factors(num)
+      .reduce((acc:number, f: number) => acc + f, 0)
 
 export function classify(num: number): Classification {
   if (num <= 0) 
