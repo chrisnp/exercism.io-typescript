@@ -1,0 +1,33 @@
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\perfect-numbers\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./perfect-numbers.test.ts
+ PASS  ./perfect-numbers.test.ts (31.113 s)
+  Perfect numbers
+    √ Smallest perfect number is classified correctly (4 ms)
+    √ Medium perfect number is classified correctly
+    √ Large perfect number is classified correctly (6018 ms)
+  Abundant numbers
+    √ Smallest abundant number is classified correctly (1 ms)
+    √ Medium abundant number is classified correctly
+    √ Large abundant number is classified correctly (11576 ms)
+  Deficient numbers
+    √ Smallest prime deficient number is classified correctly (1 ms)
+    √ Smallest non-prime deficient number is classified correctly (1 ms)
+    √ Medium deficient number is classified correctly (1 ms)
+    √ Large deficient number is classified correctly (11514 ms)
+    √ Edge case (no factors other than itself) is classified correctly (1 ms)
+  Invalid inputs
+    √ Zero is rejected (not a natural number) (12 ms)
+    √ Negative integer is rejected (not a natural number) (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        32.578 s
+Ran all test suites.
+Done in 42.15s.
