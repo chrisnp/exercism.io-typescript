@@ -1,0 +1,29 @@
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\secret-handshake\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./secret-handshake.test.ts
+ PASS  ./secret-handshake.test.ts
+  Secret Handshake
+    Create A Handshake For A Number
+      √ wink for 1 (5 ms)
+      √ double blink for 10 (1 ms)
+      √ close your eyes for 100 (1 ms)
+      √ jump for 1000 (1 ms)
+      √ combine two actions (1 ms)
+      √ reverse two actions (1 ms)
+      √ reversing one action gives the same action (1 ms)
+      √ reversing no actions still gives no actions (1 ms)
+      √ all possible actions (1 ms)
+      √ reverse all possible actions
+      √ do nothing for zero (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        4.266 s
+Ran all test suites.
+Done in 12.39s.
