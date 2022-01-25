@@ -1,7 +1,7 @@
 export const count = (sentence: String): Map<string, number> => 
       sentence.trim().toLowerCase().split(/\s+/)
-              .reduce((nums, word) => 
-                  nums.set(word, (nums.get(word) || 0) + 1), 
+              .reduce((freqs, word) => 
+                  freqs.set(word, (freqs.get(word) || 0) + 1), 
                   new Map()
               )
 
