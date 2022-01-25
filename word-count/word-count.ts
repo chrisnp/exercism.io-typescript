@@ -1,17 +1,7 @@
-class Words {
+export const count = (sentence: String): Map<string, number> => 
+      sentence.trim().toLowerCase().split(/\s+/)
+              .reduce((nums, word) => 
+                  nums.set(word, (nums.get(word) || 0) + 1), 
+                  new Map()
+              )
 
-  constructor () {}
-
-  count (sentence: String): Map<string, number> {
-      return sentence
-             .trim()
-             .toLowerCase()
-             .split(/\s+/)
-             .reduce((nums, word) =>
-                      nums.set(word,
-                               (nums.get(word) || 0) + 1),
-                               new Map())
-  }
-}
-
-export default Words
