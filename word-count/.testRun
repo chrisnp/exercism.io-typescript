@@ -84,3 +84,35 @@ Snapshots:   0 total
 Time:        7.215 s
 Ran all test suites.
 Done in 18.22s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ C:\Users\Chris\exercism\typescript\word-count\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./word-count.test.ts 
+ PASS  ./word-count.test.ts (5.588 s)
+  words()
+    √ counts one word (6 ms)
+    √ counts one of each (1 ms)
+    √ counts multiple occurrences (2 ms)
+    √ includes punctuation (1 ms)
+    √ includes numbers
+    √ normalizes to lower case (1 ms)
+    √ counts properly international characters (1 ms)
+    √ counts multiline (1 ms)
+    √ counts tabs (1 ms)
+    √ counts multiple spaces as one
+    √ does not count leading or trailing whitespace (1 ms)
+    √ handles properties that exist on Object’s prototype (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        5.848 s
+Ran all test suites.
+Done in 33.59s.
