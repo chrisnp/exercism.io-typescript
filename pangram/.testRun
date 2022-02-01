@@ -1,0 +1,27 @@
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\pangram\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./pangram.test.ts
+ PASS  ./pangram.test.ts
+  Pangram()
+    √ empty sentence (10 ms)
+    √ perfect lower case (1 ms)
+    √ only lower case
+    √ missing the letter 'x' (1 ms)
+    √ missing the letter 'h' (1 ms)
+    √ with underscores
+    √ with numbers (1 ms)
+    √ missing letters replaced by numbers
+    √ mixed case and punctuation (1 ms)
+    √ case insensitive
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        5.623 s
+Ran all test suites.
+Done in 10.48s.
