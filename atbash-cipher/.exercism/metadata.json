@@ -1,1 +1,9 @@
-{"track":"typescript","exercise":"atbash-cipher","id":"dd6c0d9cc74c4ae6a5e2250222bae14c","url":"https://exercism.org/tracks/typescript/exercises/atbash-cipher","handle":"heptalophos","is_requester":true,"auto_approve":false}
+{
+    "track": "typescript",
+    "exercise": "atbash-cipher",
+    "id": "dd6c0d9cc74c4ae6a5e2250222bae14c",
+    "url": "https://exercism.org/tracks/typescript/exercises/atbash-cipher/solutions/dd6c0d9cc74c4ae6a5e2250222bae14c",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
+}
