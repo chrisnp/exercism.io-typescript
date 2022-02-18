@@ -1,10 +1,9 @@
 const ALPHA = 
     'abcdefghijklmnopqrstuvwxyz'
 
-const mod = (x: number, y: number) =>
-                        (x % y + y) % y
+const mod = (x: number, y: number) => (x % y + y) % y
 
-export default class SimpleCipher {
+export class SimpleCipher {
 
     public readonly key: string
 
@@ -13,35 +12,25 @@ export default class SimpleCipher {
         if (key === undefined) {
             key = this.generateKey()
         }
-        else if (key.length === 0 ||
-                 key.match(/[^a-z]/)) {
+        else if (key.length === 0 || key.match(/[^a-z]/)) {
             throw new Error('Bad key')
         }
         this.key = key
     }
 
-    private dShift(key: string,
-                   input: string,
-                   direction: number) {
-        return [...input]
-               .reduce((output, ch, i) => {
-                   const offset =
-                       direction *
-                       ALPHA
-                       .indexOf(key[mod(i, key.length)])
-                   output +=
-                       ALPHA[mod(ALPHA.indexOf(ch)
-                                 + offset,
-                                 ALPHA.length)]
-                    return output
-                }, '')
+    private dShift(key: string, input: string, direction: number) {
+        return [...input].reduce((output, ch, i) => {
+                const offset = 
+                    direction * ALPHA.indexOf(key[mod(i, key.length)])
+                output += ALPHA[mod(ALPHA.indexOf(ch) + offset, ALPHA.length)]
+                return output
+               }, '')
     }
 
     private generateKey() {
-        return Array(...Array(100))
-               .map(() =>
-                    ALPHA[~~(Math.random() * ALPHA.length)])
-               .join('')
+        return Array(...Array(100)).map(() => 
+                                        ALPHA[~~(Math.random() * ALPHA.length)])
+                                   .join('')
     }
 
     encode(plaintext: string ): string {
