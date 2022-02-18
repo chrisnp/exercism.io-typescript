@@ -29,3 +29,37 @@ Snapshots:   0 total
 Time:        3.616 s
 Ran all test suites.
 Done in 13.88s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\typescript\atbash-cipher\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS ./atbash-cipher.test.ts
+ PASS  ./atbash-cipher.test.ts
+  AtbashCipher
+    encoding
+      √ encode yes (6 ms)
+      √ encode no (1 ms)
+      √ encode OMG
+      √ encode spaces (1 ms)
+      √ encode mindblowingly
+      √ encode numbers (1 ms)
+      √ encode deep thought (1 ms)
+      √ encode all the letters
+    decode
+      √ decode exercism
+      √ decode a sentence (1 ms)
+      √ decode numbers
+      √ decode all the letters (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        3.711 s
+Ran all test suites.
+Done in 13.71s.

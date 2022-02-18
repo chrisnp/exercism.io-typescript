@@ -1,4 +1,4 @@
-import SimpleCipher from './simple-cipher'
+import { SimpleCipher } from './simple-cipher'
 
 describe('Random key generation', () => {
   it('generates keys at random', () => {
@@ -26,12 +26,12 @@ describe('Random key cipher', () => {
   // characters will always output the key verbatim.
   it('can encode', () => {
     expect(simpleCipher.encode('aaaaaaaaaa')).toEqual(
-      simpleCipher.key.substr(0, 10)
+      simpleCipher.key.substring(0, 10)
     )
   })
 
   it('can decode', () => {
-    expect(simpleCipher.decode(simpleCipher.key.substr(0, 10))).toEqual(
+    expect(simpleCipher.decode(simpleCipher.key.substring(0, 10))).toEqual(
       'aaaaaaaaaa'
     )
   })
