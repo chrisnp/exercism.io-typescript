@@ -1,5 +1,5 @@
-export default class HelloWorld {
-    static hello(name:string = "World"):string {
+function hello(name:string = "World"):string {
         return `Hello, ${name}!`
-    }
 }
+
+export { hello }
