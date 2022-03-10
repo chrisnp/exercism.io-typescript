@@ -24,3 +24,24 @@ Tests:       3 passed, 3 total
 Snapshots:   0 total
 Time:        9.411s
 Ran all test suites.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\hello-world\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./hello-world.test.ts
+ PASS  ./hello-world.test.ts
+  Hello World
+    √ says hello world (6 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        2.166 s
+Ran all test suites.
+Done in 13.48s.
