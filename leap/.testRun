@@ -139,3 +139,32 @@ Snapshots:   0 total
 Time:        2.974s
 Ran all test suites.
 Done in 7.61s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\leap\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./leap.test.ts
+ PASS  ./leap.test.ts
+  A leap year
+    √ year not divisible by 4 in common year (3 ms)
+    √ year divisible by 2, not divisible by 4 in common year
+    √ year divisible by 4, not divisible by 100 in leap year (1 ms)
+    √ year divisible by 4 and 5 is still a leap year (1 ms)
+    √ year divisible by 100, not divisible by 400 in common year (1 ms)
+    √ year divisible by 100 but not by 3 is still not a leap year
+    √ year divisible by 400 in leap year
+    √ year divisible by 400 but not by 125 is still a leap year (1 ms)
+    √ year divisible by 200, not divisible by 400 in common year (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        1.774 s
+Ran all test suites.
+Done in 12.40s.
