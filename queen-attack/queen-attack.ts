@@ -1,17 +1,16 @@
 interface IPosition {
-  black: number[]
-  white: number[]
-}
-
-export default class QueenAttack implements IPosition{
-
   readonly black: number[]
   readonly white: number[]
+}
 
-  constructor(position: IPosition) {
+export class QueenAttack implements IPosition{
 
-    const { black: [bfile, brank],
-            white: [wfile, wrank] } = position
+  public readonly black: number[]
+  public readonly white: number[]
+
+  constructor(position: IPosition = {black: [0, 0], white: [0, 0]}) {
+
+    const { black: [bfile, brank], white: [wfile, wrank] } = position
 
     this.black = position.black
     this.white = position.white
@@ -21,18 +20,20 @@ export default class QueenAttack implements IPosition{
     }
   }
 
+  get position(): IPosition {
+    return [this., this.col]
+  }
+
   toString(): string {
     const [wfile, wrank] = this.white
     const [bfile, brank] = this.black
-    const board = 
-        Array.from(Array(8), () => Array(8).fill('_'))
+    const board = Array.from(Array(8), () => Array(8).fill('_'))
 
-    board[bfile][brank] = 'B';
-    board[wfile][wrank] = 'W';
+    board[bfile][brank] = 'B'
+    board[wfile][wrank] = 'W'
 
     return board.map(row => row.join(' '))
-                .join('\n') + 
-                "\n"
+                .join('\n') + "\n"
   }
 
   canAttack(): boolean {
