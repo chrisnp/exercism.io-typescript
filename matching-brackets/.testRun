@@ -192,3 +192,40 @@ Snapshots:   0 total
 Time:        10.558 s
 Ran all test suites.
 Done in 26.79s.
+
+
+
+>yarn test
+
+yarn run v1.22.10
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\matching-brackets\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./matching-brackets.test.ts
+ PASS  ./matching-brackets.test.ts (5.3 s)
+  Matching Brackets
+    √ paired square brackets (5 ms)
+    √ empty string (1 ms)
+    √ unpaired brackets (1 ms)
+    √ wrong ordered brackets
+    √ wrong closing bracket (1 ms)
+    √ paired with whitespace (1 ms)
+    √ partially paired brackets (1 ms)
+    √ simple nested brackets (1 ms)
+    √ several paired brackets
+    √ paired and nested brackets (1 ms)
+    √ unopened closing brackets
+    √ unpaired and nested brackets (1 ms)
+    √ paired and wrong nested brackets (1 ms)
+    √ paired and incomplete brackets (1 ms)
+    √ too many closing brackets
+    √ math expression (1 ms)
+    √ complex latex expression
+
+Test Suites: 1 passed, 1 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        5.548 s
+Ran all test suites.
+Done in 18.44s.
