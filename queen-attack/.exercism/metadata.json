@@ -1,9 +1,1 @@
-{
-    "track": "typescript",
-    "exercise": "queen-attack",
-    "id": "7b0dd0a225a446fab544563ab81e3606",
-    "url": "https://exercism.org/tracks/typescript/exercises/queen-attack/solutions/7b0dd0a225a446fab544563ab81e3606",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"typescript","exercise":"queen-attack","id":"7b0dd0a225a446fab544563ab81e3606","url":"https://exercism.org/tracks/typescript/exercises/queen-attack","handle":"heptalophos","is_requester":true,"auto_approve":false}
