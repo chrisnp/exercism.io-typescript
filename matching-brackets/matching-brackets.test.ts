@@ -1,77 +1,75 @@
-import MatchingBrackets from './matching-brackets'
+import { isPaired } from './matching-brackets'
 
 describe('Matching Brackets', () => {
   it('paired square brackets', () => {
-    const matchingBrackets = new MatchingBrackets('[]')
-    expect(matchingBrackets.isPaired()).toBeTruthy()
+    expect(isPaired('[]')).toEqual(true)
   })
 
   it('empty string', () => {
-    const matchingBrackets = new MatchingBrackets('')
-    expect(matchingBrackets.isPaired()).toBeTruthy()
+    expect(isPaired('')).toEqual(true)
   })
 
   it('unpaired brackets', () => {
-    const matchingBrackets = new MatchingBrackets('[[')
-    expect(matchingBrackets.isPaired()).toBeFalsy()
+    expect(isPaired('[[')).toEqual(false)
   })
 
   it('wrong ordered brackets', () => {
-    const matchingBrackets = new MatchingBrackets('}{')
-    expect(matchingBrackets.isPaired()).toBeFalsy()
+    expect(isPaired('}{')).toEqual(false)
   })
 
   it('wrong closing bracket', () => {
-    const matchingBrackets = new MatchingBrackets('{]')
-    expect(matchingBrackets.isPaired()).toBeFalsy()
+    expect(isPaired('{]')).toEqual(false)
   })
 
   it('paired with whitespace', () => {
-    const matchingBrackets = new MatchingBrackets('{ }')
-    expect(matchingBrackets.isPaired()).toBeTruthy()
+    expect(isPaired('{ }')).toEqual(true)
+  })
+
+  it('partially paired brackets', () => {
+    expect(isPaired('{[])')).toEqual(false)
   })
 
   it('simple nested brackets', () => {
-    const matchingBrackets = new MatchingBrackets('{[]}')
-    expect(matchingBrackets.isPaired()).toBeTruthy()
+    expect(isPaired('{[]}')).toEqual(true)
   })
 
   it('several paired brackets', () => {
-    const matchingBrackets = new MatchingBrackets('{}[]')
-    expect(matchingBrackets.isPaired()).toBeTruthy()
+    expect(isPaired('{}[]')).toEqual(true)
   })
 
   it('paired and nested brackets', () => {
-    const matchingBrackets = new MatchingBrackets('([{}({}[])])')
-    expect(matchingBrackets.isPaired()).toBeTruthy()
+    expect(isPaired('([{}({}[])])')).toEqual(true)
   })
 
   it('unopened closing brackets', () => {
-    const matchingBrackets = new MatchingBrackets('{[)][]}')
-    expect(matchingBrackets.isPaired()).toBeFalsy()
+    expect(isPaired('{[)][]}')).toEqual(false)
   })
 
   it('unpaired and nested brackets', () => {
-    const matchingBrackets = new MatchingBrackets('([{])')
-    expect(matchingBrackets.isPaired()).toBeFalsy()
+    expect(isPaired('([{])')).toEqual(false)
   })
 
   it('paired and wrong nested brackets', () => {
-    const matchingBrackets = new MatchingBrackets('[({]})')
-    expect(matchingBrackets.isPaired()).toBeFalsy()
+    expect(isPaired('[({]})')).toEqual(false)
+  })
+
+  it('paired and incomplete brackets', () => {
+    expect(isPaired('{}[')).toEqual(false)
+  })
+
+  it('too many closing brackets', () => {
+    expect(isPaired('[]]')).toEqual(false)
   })
 
   it('math expression', () => {
-    const matchingBrackets = new MatchingBrackets(
-      '(((185 + 223.85) * 15) - 543)/2'
-    )
-    expect(matchingBrackets.isPaired()).toBeTruthy()
+    expect(isPaired('(((185 + 223.85) * 15) - 543)/2')).toEqual(true)
   })
 
   it('complex latex expression', () => {
-    const matchingBrackets = new MatchingBrackets(
-      '\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)'
-    )
-    expect(matchingBrackets.isPaired()).toBeTruthy()
+    expect(
+      isPaired(
+        '\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)'
+      )
+    ).toEqual(true)
   })
 })
