@@ -1,60 +1,24 @@
-const squareSize =
-    (str: string): number =>
-        Math.ceil(Math.sqrt(str.length));
+const squareSize = 
+    (str: string): number => Math.ceil(Math.sqrt(str.length));
 
-const segment =
-    (input: string, chunks: number | undefined): string[] => {
-        const output: string[] = [];
-        let listchars: string[] = [...input];
-        while (listchars.length > 0) {
-            output.push(listchars.splice(0, chunks).join(""));
-        }
-        return output;
-    };
-
-const cipherText =
-    (square: string | any[], chunksize: number): string => {
-        let cipher: string = "";
-        for (let i = 0; i < chunksize; i++) {
-            for (let j = 0; j < square.length; j++) {
-                cipher += square[j][i] || "";
-            }
-        }
-        return cipher;
-    };
-
-export default class Crypto {
-
+export class Crypto {
     private readonly squareSize: number;
-    private text: string;
+    private plaintext: string;
 
     constructor (text: string ="") {
-        this.text =
-            text.toLowerCase();
-        this.squareSize =
-            squareSize(this.normalizePlaintext());
+        this.plaintext = text.replace(/\W/g, '').toLowerCase();
+        this.squareSize = squareSize(this.plaintext);
     }
 
-    size (): number {
-        return this.squareSize;
-    }
-
-    ciphertext (): string {
-        return cipherText(this.plaintextSegments(),
-                          this.squareSize);
-    }
-
-    normalizeCiphertext (): string {
-        return segment(this.ciphertext(), this.squareSize)
-               .join(" ");
-    }
-
-    normalizePlaintext (): string {
-        return this.text.replace(/[\W]/g, "");
-    }
-
-    plaintextSegments (): string[] {
-        return segment(this.normalizePlaintext(),
-                   this.squareSize);
+    get ciphertext (): string {
+        let rows = [], cols = [];
+        let listchars = [...this.plaintext];
+        while (listchars.length > 0) {
+            rows.push(listchars.splice(0, this.squareSize).join(""));
+        }
+        for (let i = 0; i < this.squareSize; ++i) {
+            cols.push(rows.map(r => r[i] || " ").join(""));
+        }
+        return cols.join(" ");
     }
 }
