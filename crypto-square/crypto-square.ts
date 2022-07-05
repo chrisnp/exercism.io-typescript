@@ -1,8 +1,7 @@
-const squareSize =
-    (str: string): number =>
-        Math.ceil(Math.sqrt(str.length));
+const squareSize = (str: string): number =>
+                    Math.ceil(Math.sqrt(str.length));
 
-const segment =
+const nub =
     (input: string, chunks: number | undefined): string[] => {
         const output: string[] = [];
         let listchars: string[] = [...input];
@@ -23,16 +22,14 @@ const cipherText =
         return cipher;
     };
 
-export default class Crypto {
+export class Crypto {
 
     private readonly squareSize: number;
     private text: string;
 
     constructor (text: string ="") {
-        this.text =
-            text.toLowerCase();
-        this.squareSize =
-            squareSize(this.normalizePlaintext());
+        this.text = text.toLowerCase();
+        this.squareSize = squareSize(this.normalizePlaintext());
     }
 
     size (): number {
@@ -40,13 +37,11 @@ export default class Crypto {
     }
 
     ciphertext (): string {
-        return cipherText(this.plaintextSegments(),
-                          this.squareSize);
+        return cipherText(this.plaintextSegments(), this.squareSize);
     }
 
     normalizeCiphertext (): string {
-        return segment(this.ciphertext(), this.squareSize)
-               .join(" ");
+        return nub(this.ciphertext(), this.squareSize).join(" ");
     }
 
     normalizePlaintext (): string {
@@ -54,7 +49,6 @@ export default class Crypto {
     }
 
     plaintextSegments (): string[] {
-        return segment(this.normalizePlaintext(),
-                   this.squareSize);
+        return nub(this.normalizePlaintext(), this.squareSize);
     }
 }
