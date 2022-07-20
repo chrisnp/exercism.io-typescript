@@ -1,0 +1,28 @@
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\prime-factors\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./prime-factors.test.ts
+ PASS  ./prime-factors.test.ts
+  calculatePrimeFactors
+    √ returns an empty array for 1 (4 ms)
+    √ factors 2
+    √ factors 3 (1 ms)
+    √ factors 4
+    √ factors 6 (1 ms)
+    √ factors 8 (1 ms)
+    √ factors 9
+    √ factors 27
+    √ factors 625 (1 ms)
+    √ factors 901255
+    √ factors 93819012551 (15 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        1.591 s
+Ran all test suites.
+Done in 8.01s.
