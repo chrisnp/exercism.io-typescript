@@ -29,56 +29,6 @@ yarn run v1.21.1
 $ yarn lint:types && jest --no-cache
 $ yarn tsc --noEmit -p .
 $ ~\exercism\typescript\resistor-color-duo\node_modules\.bin\tsc --noEmit -p .
- PASS  ./resistor-color-duo.test.ts (5.756s)
-  Resistor Colors
-    √ Brown and black (9ms)
-    √ Blue and grey (1ms)
-    √ Yellow and violet (1ms)
-    √ Orange and orange (1ms)
-    √ Ignore additional colors (2ms)
-    √ Throws error when not enough colors (9ms)
-
-Test Suites: 1 passed, 1 total
-Tests:       6 passed, 6 total
-Snapshots:   0 total
-Time:        7.608s
-Ran all test suites.
-Done in 15.67s.
-
-
-
->npm test
-
-> @exercism/typescript@1.0.0 test ~\exercism\typescript\resistor-color-duo
-> yarn lint:types && jest --no-cache
-
-yarn run v1.21.1
-$ yarn tsc --noEmit -p .
-$ ~\exercism\typescript\resistor-color-duo\node_modules\.bin\tsc --noEmit -p .
- PASS  ./resistor-color-duo.test.ts
-  Resistor Colors
-    √ Brown and black (5ms)
-    √ Blue and grey
-    √ Yellow and violet (1ms)
-    √ Orange and orange
-    √ Ignore additional colors (1ms)
-    √ Throws error when not enough colors (5ms)
-
-Test Suites: 1 passed, 1 total
-Tests:       6 passed, 6 total
-Snapshots:   0 total
-Time:        5.511s
-Ran all test suites.
-Done in 8.01s.
-
-
-
->yarn test
-
-yarn run v1.21.1
-$ yarn lint:types && jest --no-cache
-$ yarn tsc --noEmit -p .
-$ ~\exercism\typescript\resistor-color-duo\node_modules\.bin\tsc --noEmit -p .
  
  RUNS ...resistor-color-duo.test.ts
  PASS  ./resistor-color-duo.test.ts
@@ -98,26 +48,26 @@ Ran all test suites.
 Done in 11.99s.
 
 
+
 >yarn test
 
-yarn run v1.21.1
+yarn run v1.22.19
 $ yarn lint:types && jest --no-cache
 $ yarn tsc --noEmit -p .
-$ ~\exercism\typescript\resistor-color-duo\node_modules\.bin\tsc --noEmit -p .
- RUNS ...resistor-color-duo.test.ts
+$ ~\typescript\resistor-color-duo\node_modules\.bin\tsc --noEmit -p .
 
+ RUNS ./resistor-color-duo.test.ts
  PASS  ./resistor-color-duo.test.ts
   Resistor Colors
-    √ Brown and black (5ms)
+    √ Brown and black (7 ms)
     √ Blue and grey
-    √ Yellow and violet (1ms)
-    √ Orange and orange
-    √ Ignore additional colors (1ms)
-    √ Throws error when not enough colors (5ms)
+    √ Yellow and violet (1 ms)
+    √ Orange and orange (1 ms)
+    √ Ignore additional colors
 
 Test Suites: 1 passed, 1 total
-Tests:       6 passed, 6 total
+Tests:       5 passed, 5 total
 Snapshots:   0 total
-Time:        4.955s
+Time:        2.667 s
 Ran all test suites.
-Done in 12.20s.
+Done in 10.53s.

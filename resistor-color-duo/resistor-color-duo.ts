@@ -13,10 +13,9 @@ enum Colors {
 
 type Color = keyof typeof Colors;
 
-const LESS_THAN_TWO_COLORS : string =
-    "At least two colors need to be present";
+const LESS_THAN_TWO_COLORS = "At least two colors need to be present";
 
-export class ResistorColor {
+class ResistorColor {
   private colors: Color[];
 
   constructor(colors: Color[]) {
@@ -27,8 +26,11 @@ export class ResistorColor {
   }
 
   value = (): number => {
-    const [c1, c2] = this.colors.map(c =>
-                                     Colors[c]);
+    const [c1, c2] = this.colors.map(c => Colors[c]);
     return 10 * c1 + c2;
   }
+}
+
+export const decodedValue = (bands: Color[]): number => {
+    return new ResistorColor(bands).value()
 }

@@ -1,35 +1,34 @@
-class Triangle {
-
+export class Triangle {
     sides: number[]
-    
     constructor (...sides: number[]) {
         const order = (x: number, y: number) => x - y
         this.sides = sides.sort(order)
     }
-
-    kind () {
-        this.throwWhatever()
-        const distinctSides = 
-            (new Set(this.sides)).size
-        switch (distinctSides) {
-            case 1:  return 'equilateral'
-            case 2:  return 'isosceles'
-            case 3:  return 'scalene'
-            default: return 'degenerate'
-        }
-    }
-
-    triangleInequality = () => 
+    triangleInequality = (): boolean => 
         2 * Math.max(...this.sides) <
         this.sides.reduce((sum, s) => sum + s, 0); 
-
-    anySideZero = () =>
+    anySideZero = (): boolean =>
         this.sides.some((s) => s <= 0); 
-
-    throwWhatever () { 
+    throwWhatever = (): boolean => { 
         if ( !this.triangleInequality() || this.anySideZero() ) 
-               throw new Error('Illegal')
+               return true
+        return false
+    }
+    distinct = (): number => {
+        const distinctSides = 
+            (new Set(this.sides)).size
+        return distinctSides
+    }
+    get isEquilateral (): boolean { 
+        return !this.throwWhatever() && 
+        this.distinct() === 1 
+    }
+    get isIsosceles (): boolean { 
+        return !this.throwWhatever() && 
+        this.distinct() <= 2 
+    }
+    get isScalene (): boolean { 
+        return !this.throwWhatever() && 
+        this.distinct() === 3 
     }
 }
-
-export default Triangle

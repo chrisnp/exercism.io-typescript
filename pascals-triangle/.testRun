@@ -21,3 +21,29 @@ Snapshots:   0 total
 Time:        1.638 s
 Ran all test suites.
 Done in 12.71s.
+
+
+
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\pascals-triangle\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./pascals-triangle.test.ts
+ PASS  ./pascals-triangle.test.ts
+  Triangle
+    √ with one row (5 ms)
+    √ with two rows (1 ms)
+    √ with three rows (1 ms)
+    √ last row (1 ms)
+    √ fifth row (1 ms)
+    √ twentieth row (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.841 s
+Ran all test suites.
+Done in 9.08s.
