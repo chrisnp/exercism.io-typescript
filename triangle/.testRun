@@ -132,3 +132,45 @@ Snapshots:   0 total
 Time:        12.732 s
 Ran all test suites.
 Done in 27.26s.
+
+
+
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ C:\Users\Chris\exercism\typescript\triangle\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./triangle.test.ts
+ PASS  ./triangle.test.ts (5.489 s)
+  Triangle
+    equilateral triangle
+      √ all sides are equal (4 ms)
+      √ any side is unequal (1 ms)
+      √ no sides are equal (1 ms)
+      √ all zero sides is not a triangle (1 ms)
+      √ sides may be floats (1 ms)
+    isosceles triangle
+      √ last two sides are equal
+      √ first two sides are equal (1 ms)
+      √ first and last sides are equal (1 ms)
+      √ equilateral triangles are also isosceles
+      √ no sides are equal
+      √ first triangle inequality violation (1 ms)
+      √ second triangle inequality violation (1 ms)
+      √ third triangle inequality violation (1 ms)
+      √ sides may be floats
+    scalene triangle
+      √ no sides are equal (1 ms)
+      √ all sides are equal (1 ms)
+      √ two sides are equal (1 ms)
+      √ may not violate triangle inequality (1 ms)
+      √ sides may be floats
+
+Test Suites: 1 passed, 1 total
+Tests:       19 passed, 19 total
+Snapshots:   0 total
+Time:        4.724 s
+Ran all test suites.
+Done in 13.61s.
