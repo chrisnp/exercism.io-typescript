@@ -1,4 +1,4 @@
-class Triangle {
+export class Triangle {
 
     sides: number[]
     
@@ -7,7 +7,7 @@ class Triangle {
         this.sides = sides.sort(order)
     }
 
-    kind () {
+    kind = (): string => {
         this.throwWhatever()
         const distinctSides = 
             (new Set(this.sides)).size
@@ -19,17 +19,20 @@ class Triangle {
         }
     }
 
-    triangleInequality = () => 
+    get isEquilateral(): boolean { return this.kind() === 'equilateral' }
+    get isIsosceles(): boolean { return this.kind() === 'isosceles' }
+    get isScalene(): boolean { return this.kind() === 'scalene' }
+
+    triangleInequality = (): boolean => 
         2 * Math.max(...this.sides) <
         this.sides.reduce((sum, s) => sum + s, 0); 
 
-    anySideZero = () =>
+    anySideZero = (): boolean =>
         this.sides.some((s) => s <= 0); 
 
-    throwWhatever () { 
+    throwWhatever = (): boolean => { 
         if ( !this.triangleInequality() || this.anySideZero() ) 
                throw new Error('Illegal')
+        return true
     }
 }
-
-export default Triangle
