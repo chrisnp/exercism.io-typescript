@@ -1,23 +1,24 @@
-const COLORS = [ 'black',
-                 'brown',
-                 'red',
-                 'orange',
-                 'yellow',
-                 'green',
-                 'blue',
-                 'violet',
-                 'grey',
-                 'white' ]
+enum Colors {    
+    black = 0,
+    brown,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    violet,
+    grey,
+    white 
+}
 
-export type Colour = typeof COLORS[number]
+export type Colour = keyof typeof Colors
 
-export function decodedResistorValue([b1, b2, b3]: Colour[]) : string {
-  const colours = [b1, b2, b3]
+export function decodedResistorValue(colours: Colour[]) : string {
   if (colours === undefined || colours.length < 3)
-    throw new Error("there must be at least 3 colours")
-  const codes = colours.map(c => COLORS.indexOf(c))
+    throw new Error("At least 3 colors need to be present")
+  const codes = colours.map(c => Colors[c])
   if (codes.some(code => code < 0)) {
-    throw new Error("invalid colour")
+    throw new Error("Invalid colour")
   }
   const resistorValue = ((10 * codes[0]) + codes[1]) * (10 ** codes[2])
   const {value, units} = resistorValue > 1000 ? 
