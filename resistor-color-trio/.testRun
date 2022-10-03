@@ -1,0 +1,22 @@
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\resistor-color-trio\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./resistor-color-trio.test.ts
+ PASS  ./resistor-color-trio.test.ts
+  Resistor Colors
+    √ Orange and orange and black (6 ms)
+    √ Blue and grey and brown
+    √ Red and black and red (1 ms)
+    √ Green and brown and orange (1 ms)
+    √ Yellow and violet and yellow (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        2.745 s
+Ran all test suites.
+Done in 12.36s.
