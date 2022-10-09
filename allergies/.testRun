@@ -28,3 +28,36 @@ Snapshots:   0 total
 Time:        5.642 s
 Ran all test suites.
 Done in 21.47s.
+
+
+
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\allergies\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./allergies.test.ts 
+ PASS  ./allergies.test.ts
+  allergicTo
+    √ no allergies means not allergic (4 ms)
+    √ is allergic to eggs
+    √ allergic to eggs in addition to other stuff (2 ms)
+  list
+    √ no allergies at all (2 ms)
+    √ allergic to just eggs (1 ms)
+    √ allergic to just peanuts (1 ms)
+    √ allergic to just strawberries
+    √ allergic to eggs and peanuts (1 ms)
+    √ allergic to more than eggs but not peanuts (1 ms)
+    √ allergic to lots of stuff (1 ms)
+    √ allergic to everything
+    √ ignore non allergen score parts (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        4.927 s
+Ran all test suites.
+Done in 15.53s.
