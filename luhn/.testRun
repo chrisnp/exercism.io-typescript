@@ -26,3 +26,34 @@ Snapshots:   0 total
 Time:        5.24 s
 Ran all test suites.
 Done in 18.91s.
+
+
+
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\luhn\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./luhn.test.ts
+ PASS  ./luhn.test.ts
+  Luhn
+    √ single digit strings can not be valid (4 ms)
+    √ a single zero is invalid (1 ms)
+    √ a simple valid SIN that remains valid if reversed (1 ms)
+    √ a valid Canadian SIN (1 ms)
+    √ invalid Canadian SIN (1 ms)
+    √ invalid credit card
+    √ valid strings with a non-digit included become invalid (1 ms)
+    √ valid strings with punctuation included become invalid (1 ms)
+    √ valid strings with symbols included become invalid
+    √ single zero with space is invalid
+    √ input digit 9 is correctly converted to output digit 9
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        3.656 s
+Ran all test suites.
+Done in 9.74s.
