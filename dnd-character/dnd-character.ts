@@ -1,4 +1,4 @@
-const roll = () => Math.floor(1 + (Math.random() * 6))
+const roll = (sides: number) => Math.floor(1 + (Math.random() * sides))
 
 export class DnDCharacter {
   readonly strength: number = 
@@ -19,7 +19,7 @@ export class DnDCharacter {
   public static generateAbilityScore (): number {
       function *rolls (): IterableIterator<number> {
         for (let i = 0; i < 4; i++) {
-          yield roll()
+          yield roll(6)
         }
       }
       return [...rolls()].sort((a, b) => a - b)
