@@ -1,7 +1,7 @@
-const sieve = (upTo: number): boolean[] => {
-  let eratosthenes = new Array(upTo + 1).fill(null).map((x, i) => x = true )
+function* sieve (upTo: number): any {
+  let eratosthenes = new Array(upTo + 1).fill(true),
+      p = 2
   eratosthenes[0] = eratosthenes[1] = false
-  let p = 2
   while (p ** 2 <= upTo) {
     if (eratosthenes[p]) {
       for(let i: number = p ** 2; i <= upTo; i += p) {
@@ -10,15 +10,21 @@ const sieve = (upTo: number): boolean[] => {
     }
     p += 1
   }
-  return eratosthenes
+  for (let i = 0; i <= eratosthenes.length; i++) {
+    if ( eratosthenes[i] ) {
+        yield i
+    }
+  }
 }
 
-export function primes(limit: number): any {
-  const sieved: boolean[] = sieve(limit)
-  let ps: number[] = []
-
-  for (let i = 0; i <= sieved.length - 1; i++) {
-    ps = sieved[i] ? ps.concat([Number(i)]) : ps
+export const primes = (limit: number): number[] => {
+  let ps: number[] = [],
+      p: any = undefined,
+      sieved = sieve(limit)
+  while (true) {
+      p = sieved.next()
+      if (p.done) break
+      ps.push(Number(p.value || 0))
   }
   return ps
 }
