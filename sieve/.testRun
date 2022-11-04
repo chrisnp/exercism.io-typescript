@@ -20,3 +20,28 @@ Snapshots:   0 total
 Time:        2.614 s
 Ran all test suites.
 Done in 11.67s.
+
+
+
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\sieve\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./sieve.test.ts
+ PASS  ./sieve.test.ts
+  Sieve
+    √ no primes under two (4 ms)
+    √ find first prime (1 ms)
+    √ find primes up to 10 (1 ms)
+    √ limit is prime (1 ms)
+    √ find primes up to 1000 (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.743 s
+Ran all test suites.
+Done in 8.13s.

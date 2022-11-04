@@ -1,0 +1,34 @@
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\sublist\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./sublist.test.ts
+ PASS  ./sublist.test.ts
+  Sublist
+    √ empty lists (4 ms)
+    √ empty list within non empty list
+    √ non empty list contains empty list (1 ms)
+    √ list equals itself
+    √ different lists (1 ms)
+    √ false start
+    √ consecutive
+    √ sublist at start (1 ms)
+    √ sublist in middle
+    √ sublist at end (1 ms)
+    √ at start of superlist
+    √ in middle of superlist (1 ms)
+    √ at end of superlist (1 ms)
+    √ first list missing element from second list
+    √ second list missing element from first list
+    √ order matters to a list (1 ms)
+    √ same digits but different numbers (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        1.867 s
+Ran all test suites.
+Done in 8.80s.
