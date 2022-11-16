@@ -1,41 +1,56 @@
 export class ComplexNumber {
-  constructor(real: unknown, imaginary: unknown) {
-    throw new Error('Remove this statement and implement this function')
+  private _real: number
+  private _imag: number
+
+  constructor(real: number, imaginary: number) {
+    this._real = real
+    this._imag = imaginary
   }
 
   public get real(): number {
-    throw new Error('Remove this statement and implement this function')
+    return this._real
   }
 
   public get imag(): number {
-    throw new Error('Remove this statement and implement this function')
+    return this._imag
   }
 
-  public add(other: unknown): unknown {
-    throw new Error('Remove this statement and implement this function')
+  public add(that: ComplexNumber): ComplexNumber {
+    const real = this.real + that.real,
+          imag = this.imag + that.imag
+    return new ComplexNumber(real, imag)
   }
 
-  public sub(other: unknown): unknown {
-    throw new Error('Remove this statement and implement this function')
+  public sub(that: ComplexNumber): ComplexNumber {
+    const real = this.real - that.real,
+          imag = this.imag - that.imag
+    return new ComplexNumber(real, imag)
   }
 
-  public div(other: unknown): unknown {
-    throw new Error('Remove this statement and implement this function')
+  public div(that: ComplexNumber): ComplexNumber {
+    const denom = that.real ** 2 + that.imag ** 2,
+          real = (this.real * that.real + this.imag * that.imag) / denom,
+          imag = (this.imag * that.real - this.real * that.imag) / denom
+    return new ComplexNumber(real, imag)
   }
 
-  public mul(other: unknown): unknown {
-    throw new Error('Remove this statement and implement this function')
+  public mul(that: ComplexNumber): ComplexNumber {
+    const real = this.real * that.real - this.imag * that.imag,
+          imag = this.imag * that.real + this.real * that.imag
+    return new ComplexNumber(real, imag)
   }
 
-  public get abs(): unknown {
-    throw new Error('Remove this statement and implement this function')
+  public get abs(): number {
+    return (this.real ** 2 + this.imag ** 2) ** 0.5
   }
 
-  public get conj(): unknown {
-    throw new Error('Remove this statement and implement this function')
+  public get conj(): ComplexNumber {
+    return new ComplexNumber(this.real, -this.imag || 0)
   }
 
   public get exp(): ComplexNumber {
-    throw new Error('Remove this statement and implement this function')
+    const real = Math.exp(this.real) * Math.cos(this.imag),
+          imag = Math.sin(this.imag)
+    return new ComplexNumber(real, imag)
   }
 }
