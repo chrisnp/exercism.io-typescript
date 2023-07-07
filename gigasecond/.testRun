@@ -60,3 +60,23 @@ Snapshots:   0 total
 Time:        13.307 s
 Ran all test suites.
 Done in 41.06s.
+
+
+
+>yarn test
+
+ RUNS  ./gigasecond.test.ts
+ PASS  ./gigasecond.test.ts
+  Gigasecond
+    √ date only specification of time (3ms)
+    √ second test for date only specification of time
+    √ third test for date only specification of time
+    √ full time specified
+    √ full time with day roll-over
+    √ does not mutate the input (1ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        3.147s
+Ran all test suites.
