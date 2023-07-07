@@ -1,6 +1,8 @@
 .vscode
 .ionide/
 yarn.lock
+.yarn/
+/*/.yarn/
 /*/yarn.lock
 package-lock.json
 node_modules
