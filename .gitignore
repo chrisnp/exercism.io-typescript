@@ -1,6 +1,7 @@
 .vscode
 .ionide/
 yarn.lock
+.pnp.*
 .yarn/
 /*/.yarn/
 /*/yarn.lock
