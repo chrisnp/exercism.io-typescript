@@ -1,7 +1,7 @@
 const GIGASECOND = 1e09
-const MILS = 1e03
+const MILLIS = 1e03
 
-class Gigasecond {
+export class Gigasecond {
 
     private readonly dob: Date
 
@@ -9,10 +9,6 @@ class Gigasecond {
         this.dob = dob
     }
 
-    date = 
-        (): Date => 
-            new Date(this.dob.getTime() +
-                     MILS * GIGASECOND)
+    date = (): Date => 
+        new Date(this.dob.getTime() + MILLIS * GIGASECOND)
 }
-
-export default Gigasecond
