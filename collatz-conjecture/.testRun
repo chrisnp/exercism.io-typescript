@@ -67,3 +67,30 @@ Snapshots:   0 total
 Time:        9.726 s
 Ran all test suites.
 Done in 48.27s.
+
+
+
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\collatz-conjecture\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./collatz-conjecture.test.ts
+ PASS  ./collatz-conjecture.test.ts
+  CollatzConjecture
+    √ zero steps for one (3 ms)
+    √ divide if even
+    √ even and odd steps
+    √ Large number of even and odd steps
+    √ zero is an error (8 ms)
+    √ negative value is an error (1 ms)
+    √ non-integer value is an error (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        1.272 s
+Ran all test suites.
+Done in 4.77s.
