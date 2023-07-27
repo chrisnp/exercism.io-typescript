@@ -7,8 +7,8 @@ yarn.lock
 /**/yarn.lock
 package-lock.json
 node_modules
-/*/node_modules
+/**/node_modules
 cleanup.*
 HELP.md
-
+/**/*.log
 .fake
