@@ -1,9 +1,9 @@
 {
-  "track": "typescript",
-  "exercise": "armstrong-numbers",
-  "id": "2515c7473b7a4e3db3c4a7e79c69af73",
-  "url": "https://exercism.io/tracks/typescript/exercises/armstrong-numbers/solutions/2515c7473b7a4e3db3c4a7e79c69af73",
-  "handle": "heptalophos",
-  "is_requester": true,
-  "auto_approve": false
+    "track": "typescript",
+    "exercise": "armstrong-numbers",
+    "id": "2515c7473b7a4e3db3c4a7e79c69af73",
+    "url": "https://exercism.org/tracks/typescript/exercises/armstrong-numbers/solutions/2515c7473b7a4e3db3c4a7e79c69af73",
+    "handle": "heptalophos",
+    "is_requester": true,
+    "auto_approve": false
 }

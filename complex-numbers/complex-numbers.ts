@@ -28,10 +28,9 @@ export class ComplexNumber {
   }
 
   public div(that: ComplexNumber): ComplexNumber {
-    const denom = that.real ** 2 + that.imag ** 2,
-          real = (this.real * that.real + this.imag * that.imag) / denom,
-          imag = (this.imag * that.real - this.real * that.imag) / denom
-    return new ComplexNumber(real, imag)
+    const r = this.real * that.real + this.imag * that.imag,
+          i = this.imag * that.real - this.real * that.imag
+    return new ComplexNumber(r / that.abs ** 2, i / that.abs ** 2)
   }
 
   public mul(that: ComplexNumber): ComplexNumber {
@@ -45,7 +44,9 @@ export class ComplexNumber {
   }
 
   public get conj(): ComplexNumber {
-    return new ComplexNumber(this.real, -this.imag || 0)
+    const real = this.real,
+          imag = 0 - this.imag
+    return new ComplexNumber(real, imag)
   }
 
   public get exp(): ComplexNumber {
