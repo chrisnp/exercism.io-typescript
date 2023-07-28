@@ -1,0 +1,45 @@
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\list-ops\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./list-ops.test.ts
+ PASS  ./list-ops.test.ts
+  append entries to a list and return the new list
+    √ empty lists (4 ms)
+    √ list to empty list (1 ms)
+    √ empty list to list (1 ms)
+    √ non-empty lists (1 ms)
+  concat lists and lists of lists into new list
+    √ empty list (1 ms)
+    √ list of lists (1 ms)
+  filter list returning only values that satisfy the filter function
+    √ empty list (1 ms)
+    √ non empty list (1 ms)
+  returns the length of a list
+    √ empty list
+    √ non-empty list
+  returns a list of elements whose values equal the list value transformed by the mapping function
+    √ empty list
+    √ non-empty list (1 ms)
+  folds (reduces) the given list from the left with a function
+    √ empty list
+    √ direction independent function applied to non-empty list
+    √ direction dependent function applied to non-empty list
+  folds (reduces) the given list from the right with a function
+    √ empty list
+    √ direction independent function applied to non-empty list
+    √ direction dependent function applied to non-empty list
+  reverse the elements of a list
+    √ empty list (1 ms)
+    √ non-empty list (1 ms)
+    √ list of lists is not flattened
+
+Test Suites: 1 passed, 1 total
+Tests:       21 passed, 21 total
+Snapshots:   0 total
+Time:        1.384 s
+Ran all test suites.
+Done in 4.91s.
