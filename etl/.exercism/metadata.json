@@ -1,9 +1,1 @@
-{
-    "track": "typescript",
-    "exercise": "etl",
-    "id": "701e050bf33544c6b666a5dd3cb676ba",
-    "url": "https://exercism.io/tracks/typescript/exercises/etl/solutions/701e050bf33544c6b666a5dd3cb676ba",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"typescript","exercise":"etl","id":"701e050bf33544c6b666a5dd3cb676ba","url":"https://exercism.org/tracks/typescript/exercises/etl","handle":"heptalophos","is_requester":true,"auto_approve":false}
