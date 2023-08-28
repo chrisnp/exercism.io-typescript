@@ -85,3 +85,35 @@ Snapshots:   0 total
 Time:        6.922 s
 Ran all test suites.
 Done in 19.98s.
+
+
+
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\difference-of-squares\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./difference-of-squares.test.ts
+ PASS  ./difference-of-squares.test.ts
+  Squares
+    up to 5
+      √ gets the square of sum (6 ms)
+      √ gets the sum of squares (1 ms)
+      √ gets the difference
+    up to 10
+      √ gets the square of sum
+      √ gets the sum of squares
+      √ gets the difference
+    up to 100
+      √ gets the square of sum
+      √ gets the sum of squares
+      √ gets the difference
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        1.454 s
+Ran all test suites.
+Done in 4.23s.
