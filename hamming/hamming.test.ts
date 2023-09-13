@@ -1,39 +1,47 @@
-import Hamming from './hamming'
+import { compute } from './hamming'
 
 describe('Hamming', () => {
-  const hamming = new Hamming()
-
-  it('no difference between identical strands', () => {
-    expect(hamming.compute('A', 'A')).toEqual(0)
+  it('empty strands', () => {
+    expect(compute('', '')).toEqual(0)
   })
 
-  it('complete hamming distance for single nucleotide strand', () => {
-    expect(hamming.compute('A', 'G')).toEqual(1)
+  xit('single letter identical strands', () => {
+    expect(compute('A', 'A')).toEqual(0)
   })
 
-  it('complete hamming distance for small strand', () => {
-    expect(hamming.compute('AG', 'CT')).toEqual(2)
+  xit('single letter different strands', () => {
+    expect(compute('G', 'T')).toEqual(1)
   })
 
-  it('small hamming distance', () => {
-    expect(hamming.compute('AT', 'CT')).toEqual(1)
+  xit('long identical strands', () => {
+    expect(compute('GGACTGAAATCTG', 'GGACTGAAATCTG')).toEqual(0)
   })
 
-  it('small hamming distance in longer strand', () => {
-    expect(hamming.compute('GGACG', 'GGTCG')).toEqual(1)
+  xit('long different strands', () => {
+    expect(compute('GGACGGATTCTG', 'AGGACGGATTCT')).toEqual(9)
   })
 
-  it('large hamming distance', () => {
-    expect(hamming.compute('GATACA', 'GCATAA')).toEqual(4)
-  })
-
-  it('hamming distance in very long strand', () => {
-    expect(hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')).toEqual(9)
-  })
-
-  it('throws error when strands are not equal length', () => {
+  xit('disallow first strand longer', () => {
     expect(() => {
-      hamming.compute('GGACGGATTCTG', 'AGGAC')
+      compute('AATG', 'AAA')
+    }).toThrowError('DNA strands must be of equal length.')
+  })
+
+  xit('disallow second strand longer', () => {
+    expect(() => {
+      compute('ATA', 'AGTG')
+    }).toThrowError('DNA strands must be of equal length.')
+  })
+
+  xit('disallow empty first strand', () => {
+    expect(() => {
+      compute('', 'G')
+    }).toThrowError('DNA strands must be of equal length.')
+  })
+
+  xit('disallow empty second strand', () => {
+    expect(() => {
+      compute('G', '')
     }).toThrowError('DNA strands must be of equal length.')
   })
 })
