@@ -23,3 +23,32 @@ Snapshots:   0 total
 Time:        6.05 s
 Ran all test suites.
 Done in 24.07s.
+
+
+
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\hamming\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./hamming.test.ts
+ PASS  ./hamming.test.ts
+  Hamming
+    √ empty strands (4 ms)
+    √ single letter identical strands (4 ms)
+    √ single letter different strands
+    √ long identical strands
+    √ long different strands
+    √ disallow first strand longer (8 ms)
+    √ disallow second strand longer (1 ms)
+    √ disallow empty first strand (1 ms)
+    √ disallow empty second strand (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        1.251 s
+Ran all test suites.
+Done in 4.62s.
