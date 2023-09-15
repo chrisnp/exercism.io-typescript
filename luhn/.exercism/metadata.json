@@ -1,9 +1,1 @@
-{
-    "track": "typescript",
-    "exercise": "luhn",
-    "id": "d01a33f1a5254e73b316022f8e3f128d",
-    "url": "https://exercism.org/tracks/typescript/exercises/luhn/solutions/d01a33f1a5254e73b316022f8e3f128d",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"typescript","exercise":"luhn","id":"d01a33f1a5254e73b316022f8e3f128d","url":"https://exercism.org/tracks/typescript/exercises/luhn","handle":"heptalophos","is_requester":true,"auto_approve":false}
