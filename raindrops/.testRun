@@ -31,3 +31,38 @@ Snapshots:   0 total
 Time:        6.595 s
 Ran all test suites.
 Done in 28.04s.
+
+
+
+>yarn test
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\raindrops\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./raindrops.test.ts
+ PASS  ./raindrops.test.ts
+  Raindrops
+    √ converts 1 (5 ms)
+    √ converts 3 (1 ms)
+    √ converts 5 (1 ms)
+    √ converts 7
+    √ converts 6
+    √ converts 9
+    √ converts 10
+    √ converts 14
+    √ converts 15
+    √ converts 21
+    √ converts 25
+    √ converts 35
+    √ converts 49 (1 ms)
+    √ converts 52 (1 ms)
+    √ converts 105 (1 ms)
+    √ converts 12121 (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       16 passed, 16 total
+Snapshots:   0 total
+Time:        1.393 s
+Ran all test suites.
+Done in 5.72s.
