@@ -17,12 +17,13 @@ const CODONS: { [codon: string]: string } = {
     UAG: "STOP",
     UGA: "STOP",
   }
+
 export const translate = (rna: string = ""): string[] => {
     const rnaSeq: string[] = rna.match (/.../g) || []
     const proteins: string[] = rnaSeq.map (codon => CODONS[codon] || 'INVALID')
-    if ( proteins.includes('INVALID') || rna.length % 3 !== 0 ) { 
+    const stop: number = proteins.indexOf("STOP")
+    if ( proteins.includes('INVALID') || (rna.length % 3 && stop < 0) ) {  
       throw new Error('Invalid codon') 
     }
-    const stop: number = proteins.indexOf("STOP")
     return stop > -1 ? proteins.slice(0, stop) : proteins
 }
