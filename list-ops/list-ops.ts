@@ -29,10 +29,8 @@ export class List<T> {
         return this.foldr<List<T>, T>((acc, x) => new List(fn(x), acc), List.create())
     }
     public filter<T>(fn: (arg: T) => boolean): List<T> {
-        return this.foldr<List<T>, T>((acc, x) => (fn(x) 
-                                                   ? new List(x, acc) 
-                                                   : acc), 
-                                     List.create())
+        return this.foldr<List<T>, T>((acc, x) => (fn(x) ? new List(x, acc) : acc), 
+                                      List.create())
     }
     public reverse<T>(): List<T> {
         return this.foldl<List<T>, T>((acc, x) => new List(x, acc), List.create())
