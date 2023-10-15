@@ -1,5 +1,4 @@
 >yarn test
-
 yarn run v1.21.1
 $ yarn lint:types && jest --no-cache
 $ yarn tsc --noEmit -p .
@@ -42,63 +41,46 @@ Done in 16.04s.
 
 
 >yarn test
-
 yarn run v1.22.19
 $ yarn lint:types && jest --no-cache
 $ yarn tsc --noEmit -p .
-$ ~\exercism\typescript\protein-translation\node_modules\.bin\tsc --noEmit -p .
+$ ~\typescript\protein-translation\node_modules\.bin\tsc --noEmit -p .
+RUNS  ./protein-translation.test.ts
+PASS  ./protein-translation.test.ts
+Translate input RNA sequences into proteins
+  √ Methionine RNA sequence (4 ms)
+  √ Phenylalanine RNA sequence 1 (1 ms)
+  √ Phenylalanine RNA sequence 2
+  √ Leucine RNA sequence 1
+  √ Leucine RNA sequence 2
+  √ Serine RNA sequence 1 (1 ms)
+  √ Serine RNA sequence 2 (1 ms)
+  √ Serine RNA sequence 3 (1 ms)
+  √ Serine RNA sequence 4 (1 ms)
+  √ Tyrosine RNA sequence 1
+  √ Tyrosine RNA sequence 2 (1 ms)
+  √ Cysteine RNA sequence 1 (1 ms)
+  √ Cysteine RNA sequence 2
+  √ Tryptophan RNA sequence
+  √ STOP codon RNA sequence 1
+  √ STOP codon RNA sequence 2 (1 ms)
+  √ STOP codon RNA sequence 3
+  √ Sequence of two protein codons translates into proteins
+  √ Sequence of two different protein codons translates into proteins (1 ms)
+  √ Translate RNA strand into correct protein list
+  √ Translation stops if STOP codon at beginning of sequence
+  √ Translation stops if STOP codon at end of two-codon sequence (1 ms)
+  √ Translation stops if STOP codon at end of three-codon sequence (1 ms)
+  √ Translation stops if STOP codon in middle of three-codon sequence
+  √ Translation stops if STOP codon in middle of six-codon sequence
+  √ Non-existing codon can't translate (12 ms)
+  √ Unknown amino acids, not part of a codon, can't translate (9 ms)
+  √ Incomplete RNA sequence can't translate (4 ms)
+  √ Incomplete RNA sequence can translate if valid until a STOP codon (3 ms)
 
- RUNS  ./protein-translation.test.ts
- FAIL  ./protein-translation.test.ts
-  Translate input RNA sequences into proteins
-    √ Methionine RNA sequence (5 ms)
-    √ Phenylalanine RNA sequence 1
-    √ Phenylalanine RNA sequence 2 (1 ms)
-    √ Leucine RNA sequence 1 (1 ms)
-    √ Leucine RNA sequence 2 (1 ms)
-    √ Serine RNA sequence 1 (1 ms)
-    √ Serine RNA sequence 2 (1 ms)
-    √ Serine RNA sequence 3 (1 ms)
-    √ Serine RNA sequence 4 (1 ms)
-    √ Tyrosine RNA sequence 1 (1 ms)
-    √ Tyrosine RNA sequence 2 (1 ms)
-    √ Cysteine RNA sequence 1
-    √ Cysteine RNA sequence 2
-    √ Tryptophan RNA sequence (1 ms)
-    √ STOP codon RNA sequence 1 (1 ms)
-    √ STOP codon RNA sequence 2 (1 ms)
-    √ STOP codon RNA sequence 3
-    √ Sequence of two protein codons translates into proteins
-    √ Sequence of two different protein codons translates into proteins
-    √ Translate RNA strand into correct protein list (1 ms)
-    √ Translation stops if STOP codon at beginning of sequence
-    √ Translation stops if STOP codon at end of two-codon sequence
-    √ Translation stops if STOP codon at end of three-codon sequence
-    √ Translation stops if STOP codon in middle of three-codon sequence
-    √ Translation stops if STOP codon in middle of six-codon sequence
-    √ Non-existing codon can't translate (14 ms)
-    √ Unknown amino acids, not part of a codon, can't translate (6 ms)
-    √ Incomplete RNA sequence can't translate (2 ms)
-    × Incomplete RNA sequence can translate if valid until a STOP codon (1 ms)
-
-  ● Translate input RNA sequences into proteins › Incomplete RNA sequence can translate if valid until a STOP codon
-
-    Invalid codon
-
-      22 |     const proteins: string[] = rnaSeq.map (codon => CODONS[codon] || 'INVALID')
-      23 |     if ( proteins.includes('INVALID') || rna.length % 3 !== 0 ) {
-    > 24 |       throw new Error('Invalid codon')
-         |             ^
-      25 |     }
-      26 |     const stop: number = proteins.indexOf("STOP")
-      27 |     return stop > -1 ? proteins.slice(0, stop) : proteins
-
-      at translate (protein-translation.ts:24:13)
-      at Object.<anonymous> (protein-translation.test.ts:149:21)
-
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 28 passed, 29 total
+Test Suites: 1 passed, 1 total
+Tests:       29 passed, 29 total
 Snapshots:   0 total
-Time:        1.411 s
+Time:        1.209 s
 Ran all test suites.
-error Command failed with exit code 1.
+Done in 4.71s.
