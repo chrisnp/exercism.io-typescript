@@ -5,7 +5,7 @@ describe('Acronym are produced from', () => {
     expect(parse('Portable Network Graphics')).toEqual('PNG')
   })
 
-  ut('other title cased phrases', () => {
+  it('other title cased phrases', () => {
     expect(parse('Ruby on Rails')).toEqual('ROR')
   })
 
