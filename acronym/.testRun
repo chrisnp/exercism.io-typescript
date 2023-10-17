@@ -1,0 +1,22 @@
+>yarn test
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\typescript\acronym\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./acronym.test.ts
+ PASS  ./acronym.test.ts
+  Acronym are produced from
+    √ title cased phrases (4 ms)
+    √ other title cased phrases (1 ms)
+    √ inconsistently cased phrases
+    √ phrases with punctuation
+    √ other phrases with punctuation
+    √ phrases with punctuation and sentence casing
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.165 s
+Ran all test suites.
+Done in 4.60s.
