@@ -10,6 +10,7 @@ node_modules
 /**/node_modules
 /**/.yarn/
 cleanup.*
+prepareTests.ps1
 HELP.md
 /**/*.log
 .fake
