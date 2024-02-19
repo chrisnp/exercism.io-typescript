@@ -1,0 +1,33 @@
+---------------------------------------
+Mon Feb 19 13:02:56 GTBST 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\darts\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./darts.test.ts
+ PASS  ./darts.test.ts
+  Darts
+    √ Missed target (3 ms)
+    √ On the outer circle
+    √ On the middle circle (1 ms)
+    √ On the inner circle (1 ms)
+    √ Exactly on centre (1 ms)
+    √ Near the centre
+    √ Just within the inner circle
+    √ Just outside the inner circle
+    √ Just within the middle circle
+    √ Just outside the middle circle
+    √ Just within the outer circle
+    √ Just outside the outer circle
+    √ Asymmetric position between the inner and middle circles
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        1.101 s
+Ran all test suites.
+Done in 4.55s.
