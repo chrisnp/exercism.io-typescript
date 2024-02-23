@@ -20,3 +20,36 @@ Snapshots:   0 total
 Time:        2.745 s
 Ran all test suites.
 Done in 12.36s.
+
+
+
+---------------------------------------
+Fri Feb 23 19:53:00 GTBST 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\resistor-color-trio\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./resistor-color-trio.test.ts
+ PASS  ./resistor-color-trio.test.ts
+  Resistor Colors
+    √ Orange and orange and black (3 ms)
+    √ Blue and grey and brown
+    √ Red and black and red (1 ms)
+    √ Green and brown and orange (1 ms)
+    √ Yellow and violet and yellow (1 ms)
+    √ Blue and violet and blue
+    √ Minimum possible value
+    √ Maximum possible value (1 ms)
+    √ First two colors make an invalid octal number (1 ms)
+    √ Ignore extra colors
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        1.08 s
+Ran all test suites.
+Done in 4.24s.
