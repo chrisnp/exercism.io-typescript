@@ -1,4 +1,2 @@
-const twoFer = (name?: string): string =>
+export const twoFer = ( name?: string ) => 
     `One for ${name || 'you'}, one for me.`
-
-export default twoFer
