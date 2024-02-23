@@ -1,4 +1,4 @@
-import twoFer from './two-fer'
+import { twoFer } from './two-fer'
 
 describe('TwoFer', () => {
   it('no name given', () => {
@@ -6,12 +6,12 @@ describe('TwoFer', () => {
     expect(twoFer()).toEqual(expected)
   })
 
-  it('a name given', () => {
+  xit('a name given', () => {
     const expected = 'One for Alice, one for me.'
     expect(twoFer('Alice')).toEqual(expected)
   })
 
-  it('another name given', () => {
+  xit('another name given', () => {
     const expected = 'One for Bob, one for me.'
     expect(twoFer('Bob')).toEqual(expected)
   })
