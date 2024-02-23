@@ -1,4 +1,4 @@
-import twoFer from './two-fer'
+import { twoFer } from './two-fer'
 
 describe('TwoFer', () => {
   it('no name given', () => {

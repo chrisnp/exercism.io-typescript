@@ -37,3 +37,29 @@ Snapshots:   0 total
 Time:        4.296 s
 Ran all test suites.
 Done in 14.25s.
+
+
+
+---------------------------------------
+Fri Feb 23 19:40:39 GTBST 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\two-fer\node_modules\.bin\tsc --noEmit -p .
+ 
+ RUNS  ./two-fer.test.ts
+ PASS  ./two-fer.test.ts
+  TwoFer
+    √ no name given (3 ms)
+    √ a name given (1 ms)
+    √ another name given (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.028 s
+Ran all test suites.
+Done in 4.22s.
