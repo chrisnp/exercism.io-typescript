@@ -140,7 +140,7 @@ Done in 27.26s.
 yarn run v1.22.19
 $ yarn lint:types && jest --no-cache
 $ yarn tsc --noEmit -p .
-$ C:\Users\Chris\exercism\typescript\triangle\node_modules\.bin\tsc --noEmit -p .
+$ ~\exercism\typescript\triangle\node_modules\.bin\tsc --noEmit -p .
 
  RUNS  ./triangle.test.ts
  PASS  ./triangle.test.ts (5.489 s)
