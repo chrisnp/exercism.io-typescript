@@ -63,7 +63,7 @@ Done in 29.44s.
 yarn run v1.22.10
 $ yarn lint:types && jest --no-cache
 $ yarn tsc --noEmit -p .
-$ C:\Users\Chris\exercism\typescript\crypto-square\node_modules\.bin\tsc --noEmit -p .
+$ ~\exercism\typescript\crypto-square\node_modules\.bin\tsc --noEmit -p .
 
  RUNS  ./crypto-square.test.ts
  PASS  ./crypto-square.test.ts
