@@ -18,36 +18,36 @@ export class LinkedList<T> {
     }
     else {
       this.last.next = node
-      node.prev = this.head
+      node.prev = this.last
     }
     this.last = node
     return this
   }
 
   public pop = (): T => {
-    if (!this.last) throw new Error("Empty list. Cant't pop.")
     const node = this.last
-    if (!node.prev) {
-      this.last == undefined
-      this.head == undefined
+    if (!node) throw new Error("Empty list. Cant't pop.")
+    if (node.prev) {
+      node.prev.next = undefined
+      this.last = node.prev
     }
     else {
-      node.prev.next == undefined
-      this.last = node.prev
+      this.last = undefined
+      this.head = undefined
     }
     return node.value 
   }
 
   public shift = (): T => {
-    if (!this.head) throw new Error("Empty list. Can't shift")
     const node = this.head
-    if (!node.next) {
-      this.head == undefined
-      this.last == undefined
+    if (!node) throw new Error("Empty list. Can't shift")
+    if (node.next) {
+      node.next.prev = undefined
+      this.head = node.next
     }
     else {
-      node.next.prev == undefined
-      this.head = node.next
+      this.head = undefined
+      this.last = undefined
     }
     return node.value
   }
@@ -69,10 +69,10 @@ export class LinkedList<T> {
     let node = this.head
     while (node) {
       if (node.value == element) {
-        if (node.prev) node.prev.next = node.next
         if (node.next) node.next.prev = node.prev
-        if (this.head == node) this.head == undefined
-        if (this.last == node) this.last == undefined
+        if (node.prev) node.prev.next = node.next
+        if (this.head == node) this.head = undefined
+        if (this.last == node) this.last = undefined
         break
       }
       node = node.next
@@ -81,11 +81,10 @@ export class LinkedList<T> {
   }
 
   public count = (): number => {
-    let count = 0 
-    let node = this.head
+    let count = 0, node = this.last
     while (node) {
       count += 1
-      node = node.next
+      node = node.prev
     }
     return count
   }
