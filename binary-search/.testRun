@@ -26,3 +26,37 @@ Snapshots:   0 total
 Time:        3.654 s
 Ran all test suites.
 Done in 13.00s.
+
+
+
+---------------------------------------
+Thu Apr 11 00:40:18 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\binary-search\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./binary-search.test.ts
+ PASS  ./binary-search.test.ts
+  Binary Search
+    √ finds a value in an array with one element (3 ms)
+    √ finds a value in the middle of an array (1 ms)
+    √ finds a value at the beginning of an array
+    √ finds a value at the end of an array
+    √ finds a value in an array of odd length (4 ms)
+    √ finds a value in an array of even length
+    √ identifies that a value is not included in the array (1 ms)
+    √ a value smaller than the array's smallest value is not found (1 ms)
+    √ a value larger than the array's largest value is not found
+    √ nothing is found in an empty array
+    √ nothing is found when the left and right bounds cross (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        2.22 s
+Ran all test suites.
+Done in 5.36s.
