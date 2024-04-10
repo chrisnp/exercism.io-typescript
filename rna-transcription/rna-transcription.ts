@@ -1,5 +1,4 @@
-const TRANSCRIBE:
-    { [nucl: string]: string } = {
+const TRANSCRIBE: { [nucl: string]: string } = {
     G: "C",
     C: "G",
     T: "A",
