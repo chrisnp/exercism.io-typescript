@@ -1,7 +1,7 @@
 class Node<T> {
-  value: T;
-  prev?: Node<T>;
-  next?: Node<T>;
+  value: T
+  prev?: Node<T>
+  next?: Node<T>
   constructor(value: T) {
     this.value = value
   }
