@@ -29,3 +29,37 @@ Snapshots:   0 total
 Time:        1.325 s
 Ran all test suites.
 Done in 4.84s.
+
+
+
+---------------------------------------
+Thu Apr 11 00:28:25 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\linked-list\node_modules\.bin\tsc --noEmit -p .
+
+  RUNS  ./linked-list.test.ts
+  PASS  ./linked-list.test.ts
+  LinkedList
+    √ add/extract elements to the end of the list with push/pop (4 ms)
+    √ extract elements from the beginning of the list with shift (1 ms)
+    √ add/extract elements from the beginning of the list with unshift/shift
+    √ unshift/pop
+    √ example (1 ms)
+    √ can count its elements (1 ms)
+    √ sets head/tail after popping last element
+    √ sets head/tail after shifting last element
+    √ deletes the element with the specified value from the list
+    √ deletes the only element
+    √ delete does not modify the list if the element is not found
+
+  Test Suites: 1 passed, 1 total
+  Tests:       11 passed, 11 total
+  Snapshots:   0 total
+  Time:        1.413 s
+  Ran all test suites.
+  Done in 4.89s.
