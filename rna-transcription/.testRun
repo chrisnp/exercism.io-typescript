@@ -8,90 +8,6 @@ $ ~\exercism\typescript\rna-transcription\node_modules\.bin\tsc --noEmit -p .
  RUNS ...rna-transcription.test.ts
  PASS  ./rna-transcription.test.ts
   Transcriptor
-    √ transcribes cytosine to guanine (7 ms)
-    √ transcribes guanine to cytosine (1 ms)
-    √ transcribes adenine to uracil (1 ms)
-    √ transcribes thymine to adenine
-    √ transcribes all dna nucleotides to their rna complements (1 ms)
-    √ correctly handles invalid input (5 ms)
-    √ correctly handles completely invalid input (1 ms)
-    √ correctly handles partially invalid input (1 ms)
-
-Test Suites: 1 passed, 1 total
-Tests:       8 passed, 8 total
-Snapshots:   0 total
-Time:        5.562 s
-Ran all test suites.
-Done in 17.85s.
-
-
-
->yarn test
-
-yarn run v1.21.1
-$ yarn lint:types && jest --no-cache
-$ yarn tsc --noEmit -p .
-$ ~\exercism\typescript\rna-transcription\node_modules\.bin\tsc --noEmit -p .
-
- RUNS ...rna-transcription.test.ts
- PASS  ./rna-transcription.test.ts
-  Transcriptor
-    √ transcribes cytosine to guanine (4 ms)
-    √ transcribes guanine to cytosine (1 ms)
-    √ transcribes adenine to uracil
-    √ transcribes thymine to adenine
-    √ transcribes all dna nucleotides to their rna complements (6 ms)
-    √ correctly handles invalid input (5 ms)
-    √ correctly handles completely invalid input (1 ms)
-    √ correctly handles partially invalid input (1 ms)
-
-Test Suites: 1 passed, 1 total
-Tests:       8 passed, 8 total
-Snapshots:   0 total
-Time:        4.498 s
-Ran all test suites.
-Done in 15.14s.
-
-
-
->yarn test
-
-yarn run v1.21.1
-$ yarn lint:types && jest --no-cache
-$ yarn tsc --noEmit -p .
-$ ~\exercism\typescript\rna-transcription\node_modules\.bin\tsc --noEmit -p .
-
- RUNS ...rna-transcription.test.ts
- PASS  ./rna-transcription.test.ts
-  Transcriptor
-    √ transcribes cytosine to guanine (5 ms)
-    √ transcribes guanine to cytosine (1 ms)
-    √ transcribes adenine to uracil
-    √ transcribes thymine to adenine (1 ms)
-    √ transcribes all dna nucleotides to their rna complements
-    √ correctly handles invalid input (5 ms)
-    √ correctly handles completely invalid input (1 ms)
-    √ correctly handles partially invalid input (1 ms)
-
-Test Suites: 1 passed, 1 total
-Tests:       8 passed, 8 total
-Snapshots:   0 total
-Time:        5.245 s
-Ran all test suites.
-Done in 17.01s.
-
-
-
->yarn test
-
-yarn run v1.21.1
-$ yarn lint:types && jest --no-cache
-$ yarn tsc --noEmit -p .
-$ ~\exercism\typescript\rna-transcription\node_modules\.bin\tsc --noEmit -p .
-
- RUNS ...rna-transcription.test.ts
- PASS  ./rna-transcription.test.ts
-  Transcriptor
     √ transcribes cytosine to guanine (4 ms)
     √ transcribes guanine to cytosine (1 ms)
     √ transcribes adenine to uracil (6 ms)
@@ -133,3 +49,34 @@ Snapshots:   0 total
 Time:        3.731 s
 Ran all test suites.
 Done in 13.95s.
+
+
+
+---------------------------------------
+Thu Apr 11 00:16:13 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\rna-transcription\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./rna-transcription.test.ts
+ PASS  ./rna-transcription.test.ts
+  Transcriptor
+    √ transcribes cytosine to guanine (5 ms)
+    √ transcribes guanine to cytosine
+    √ transcribes adenine to uracil (1 ms)
+    √ transcribes thymine to adenine (1 ms)
+    √ transcribes all dna nucleotides to their rna complements (1 ms)
+    √ correctly handles invalid input (8 ms)
+    √ correctly handles completely invalid input (1 ms)
+    √ correctly handles partially invalid input (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        1.211 s
+Ran all test suites.
+Done in 4.58s.
