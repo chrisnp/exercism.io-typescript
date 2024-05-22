@@ -1,21 +1,16 @@
+function* flattener(list: any[], levels: number): Generator<any[]> {
+    if (levels === undefined) levels = 1
+    for (const item of list) {
+        if (Array.isArray(item) && levels > 0) 
+            yield* flattener(item, levels - 1)
+        else if (item !== undefined) yield item
+        else continue
+    }
+}
+
 class FlattenArray {
-
     static flatten(array: any[]): any[] {
-
-        const flat: any[] = []
-        
-        array.forEach((item) => {
-            if (!Array.isArray(item)) {
-                if (item !== null && item !== undefined) {
-                    flat.push(item)
-                }
-            } else {
-                this.flatten(item).forEach((i) =>
-                        flat.push(i))
-            }
-        })
-
-        return flat
+        return [...flattener(array, Infinity)]
     }
 }
 

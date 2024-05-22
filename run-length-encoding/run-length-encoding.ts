@@ -1,14 +1,5 @@
-export default class RunLengthEncoding {
+export const encode = (plain: string): string =>
+  plain.replace(/(.)\1+/g, (group, c) => group.length + c)
 
-  static encode(plain: string): string {
-    return plain
-           .replace(/(.)\1+/g, (group, ch) =>
-                                group.length + ch)
-  }
-
-  static decode(encoded: string): string {
-    return encoded
-           .replace(/(\d+)(\w|\s)/g, (_, count, ch) =>
-                                      ch.repeat(count))
-  }
-}
+export const decode = (encoded: string): string => 
+  encoded.replace(/(\d+)(\w|\s)/g, (_, count, c) => c.repeat(count))

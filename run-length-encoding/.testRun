@@ -36,6 +36,7 @@ yarn run v1.21.1
 $ yarn lint:types && jest --no-cache
 $ yarn tsc --noEmit -p .
 $ ~\exercism\typescript\run-length-encoding\node_modules\.bin\tsc --noEmit -p .
+ 
  PASS  ./run-length-encoding.test.ts (8.129s)
   run-length encode a string
     √ empty string (9ms)
@@ -63,35 +64,38 @@ Done in 17.44s.
 
 
 
+---------------------------------------
+Wed May 22 23:18:34 GTBDT 2024
+---------------------------------------
 >yarn test
 
-yarn run v1.22.10
+yarn run v1.22.19
 $ yarn lint:types && jest --no-cache
 $ yarn tsc --noEmit -p .
 $ ~\exercism\typescript\run-length-encoding\node_modules\.bin\tsc --noEmit -p .
 
  RUNS  ./run-length-encoding.test.ts
- PASS  ./run-length-encoding.test.ts (5.394 s)
+ PASS  ./run-length-encoding.test.ts
   run-length encode a string
-    √ empty string (11 ms)
-    √ single characters only are encoded without count (2 ms)
-    √ string with no single characters (2 ms)
-    √ single characters mixed with repeated characters (1 ms)
-    √ multiple whitespace mixed in string (1 ms)
-    √ lowercase characters (2 ms)
+    √ empty string (4 ms)
+    √ single characters only are encoded without count (1 ms)
+    √ string with no single characters
+    √ single characters mixed with repeated characters
+    √ multiple whitespace mixed in string
+    √ lowercase characters
   run-length decode a string
-    √ empty string (1 ms)
-    √ single characters only (2 ms)
-    √ string with no single characters (1 ms)
-    √ single characters with repeated characters (1 ms)
-    √ multiple whitespace mixed in string (1 ms)
-    √ lower case string (2 ms)
+    √ empty string
+    √ single characters only
+    √ string with no single characters
+    √ single characters with repeated characters
+    √ multiple whitespace mixed in string
+    √ lower case string
   encode and then decode
-    √ encode followed by decode gives original string (1 ms)
+    √ encode followed by decode gives original string
 
 Test Suites: 1 passed, 1 total
 Tests:       13 passed, 13 total
 Snapshots:   0 total
-Time:        8.479 s
+Time:        1.08 s
 Ran all test suites.
-Done in 40.90s.
+Done in 4.42s.
