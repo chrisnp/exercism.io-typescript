@@ -20,28 +20,6 @@ Ran all test suites.
 Done in 7.95s.
 
 
-yarn run v1.21.1
-$ yarn lint:types && jest --no-cache
-$ yarn tsc --noEmit -p .
-$ ~\exercism\typescript\flatten-array\node_modules\.bin\tsc --noEmit -p .
-
- PASS  ./flatten-array.test.ts (5.438s)
-  Flatten Array
-    √ no nesting (9ms)
-    √ flattens array with just integers present (1ms)
-    √ 5 level nesting (1ms)
-    √ 6 level nesting
-    √ 6 level nest list with null values (1ms)
-    √ all values in nested list are null (1ms)
-
-Test Suites: 1 passed, 1 total
-Tests:       6 passed, 6 total
-Snapshots:   0 total
-Time:        6.775s
-Ran all test suites.
-Done in 16.54s.
-
-
 
 yarn run v1.21.1
 $ yarn lint:types && jest --no-cache
@@ -89,3 +67,32 @@ Snapshots:   0 total
 Time:        9.188 s
 Ran all test suites.
 Done in 19.15s.
+
+
+
+---------------------------------------
+Wed May 22 22:55:05 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\flatten-array\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./flatten-array.test.ts
+ PASS  ./flatten-array.test.ts
+  Flatten Array
+    √ no nesting (4 ms)
+    √ flattens array with just integers present
+    √ 5 level nesting (1 ms)
+    √ 6 level nesting
+    √ 6 level nest list with null values (1 ms)
+    √ all values in nested list are null
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        2.15 s
+Ran all test suites.
+Done in 8.22s.
