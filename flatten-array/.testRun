@@ -2,7 +2,6 @@ yarn run v1.16.0
 $ tsc --noEmit -p . && jest --no-cache
 
  RUNS  ...flatten-array.test.ts
-
  PASS  .\flatten-array.test.ts
   Flatten Array
     √ no nesting (7ms)
