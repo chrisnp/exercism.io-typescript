@@ -1,9 +1,1 @@
-{
-    "track": "typescript",
-    "exercise": "flatten-array",
-    "id": "d4888180808b4e84a5a0932e70152618",
-    "url": "https://exercism.io/tracks/typescript/exercises/flatten-array/solutions/d4888180808b4e84a5a0932e70152618",
-    "handle": "heptalophos",
-    "is_requester": true,
-    "auto_approve": false
-}
+{"track":"typescript","exercise":"flatten-array","id":"d4888180808b4e84a5a0932e70152618","url":"https://exercism.org/tracks/typescript/exercises/flatten-array","handle":"heptalophos","is_requester":true,"auto_approve":false}
