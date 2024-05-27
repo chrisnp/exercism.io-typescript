@@ -8,4 +8,5 @@ function* flattener(list: any[], levels: number): Generator<any[]> {
     }
 }
 
-export const flatten = (array: any[]): any[] => [...flattener(array, Infinity)]
+export const flatten = 
+    (array: any[]): any[] => [...flattener(array, Infinity)]
