@@ -1,15 +1,19 @@
 export class Squares {
-
-  squareOfSum:  number
-  sumOfSquares: number
-  difference:   number
+  private readonly limit: number
+  public sumOfSquares: number
+  public squareOfSum: number
+  public difference: number
 
   constructor (num: number) {
-      this.squareOfSum = 
-          (num * (num + 1) / 2) ** 2
-      this.sumOfSquares = 
-          (num ** 3) / 3 + (num ** 2) / 2 + num / 6
-      this.difference = 
-          this.squareOfSum - this.sumOfSquares
+    this.limit = num
+    this.sumOfSquares = Array.from({length: this.limit})
+                             .map((_, i) => (i + 1) ** 2)
+                             .reduce((acc, x) => acc + x, 0)
+    this.squareOfSum =  Array.from({length: this.limit})
+                             .map((_, i) => (i + 1))
+                             .reduce((acc, x) => acc + x, 0) ** 2
+    this.difference = this.squareOfSum - this.sumOfSquares
+
+                      
   }
 }
