@@ -1,3 +1,5 @@
+const sorted = (word: string): string => [...word].sort().join('')
+
 export class Anagram {
   private readonly word: string
 
@@ -11,5 +13,3 @@ export class Anagram {
            .filter((w) => sorted(w.toLowerCase()) === sorted(this.word))
   }
 }
-
-const sorted = (word: string): string => [...word].sort().join('')
