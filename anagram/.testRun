@@ -1,0 +1,38 @@
+---------------------------------------
+Tue May 28 17:15:17 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\anagram\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./anagram.test.ts
+ PASS  ./anagram.test.ts
+  Anagram
+    √ no matches (8 ms)
+    √ detects two anagrams (6 ms)
+    √ does not detect anagram subsets (1 ms)
+    √ detects anagram (1 ms)
+    √ detects three anagrams (1 ms)
+    √ detects multiple anagrams with different case (1 ms)
+    √ does not detect non-anagrams with identical checksum (1 ms)
+    √ detects anagrams case-insensitively (1 ms)
+    √ detects anagrams using case-insensitive subject (1 ms)
+    √ detects anagrams using case-insensitive possible matches (1 ms)
+    √ does not detect an anagram if the original word is repeated
+    √ anagrams must use all letters exactly once
+    √ words are not anagrams of themselves (1 ms)
+    √ words are not anagrams of themselves even if letter case is partially different (1 ms)
+    √ words are not anagrams of themselves even if letter case is completely different (1 ms)
+    √ words other than themselves can be anagrams (1 ms)
+    √ matches() accepts string arguments
+    √ matches() accepts single string argument
+
+Test Suites: 1 passed, 1 total
+Tests:       18 passed, 18 total
+Snapshots:   0 total
+Time:        1.364 s
+Ran all test suites.
+Done in 5.08s.
