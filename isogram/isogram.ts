@@ -1,3 +1,8 @@
-export function isIsogram(/* parameters go here */): unknown {
-  throw new Error('Remove this statement and implement this function')
-}
+const normalform = (s: string): string => 
+  s.replace(/\s|-/g, '').toLowerCase()
+
+export const  isIsogram = (word: string): boolean =>
+  normalform(word).split('')
+                  .filter((c, i, w) => w.indexOf(c) === i)
+                  .length === normalform(word).length
+
