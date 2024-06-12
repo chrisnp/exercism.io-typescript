@@ -1,0 +1,24 @@
+---------------------------------------
+Wed Jun 12 19:00:54 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\eliuds-eggs\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./eliuds-eggs.test.ts
+ PASS  ./eliuds-eggs.test.ts
+  EliudsEggs
+    √ 0 eggs (7 ms)
+    √ 1 egg
+    √ 4 eggs (1 ms)
+    √ 13 eggs (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.13 s
+Ran all test suites.
+Done in 4.23s.

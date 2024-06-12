@@ -13,7 +13,5 @@ export class Squares {
                              .map((_, i) => (i + 1))
                              .reduce((acc, x) => acc + x, 0) ** 2
     this.difference = this.squareOfSum - this.sumOfSquares
-
-                      
   }
 }
