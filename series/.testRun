@@ -1,0 +1,30 @@
+---------------------------------------
+Wed Jun 19 16:14:58 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\series\node_modules\.bin\tsc --noEmit -p .
+Done in 1.91s.
+ RUNS  ./series.test.ts
+ PASS  ./series.test.ts
+  Series
+    √ slices of one from one (4 ms)
+    √ slices of one from two
+    √ slices of two
+    √ slices of two overlap
+    √ slices can include duplicates
+    √ slices of long series (1 ms)
+    √ slice length is too large (12 ms)
+    √ slice length is way too large (1 ms)
+    √ slice length cannot be zero
+    √ slice length cannot be negative (1 ms)
+    √ empty series is invalid (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        1.297 s
+Ran all test suites.
