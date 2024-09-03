@@ -1,0 +1,46 @@
+---------------------------------------
+Wed Sep  4 00:15:16 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\roman-numerals\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./roman-numerals.test.ts
+ PASS  ./roman-numerals.test.ts
+  toRoman()
+    √ converts 1 (4 ms)
+    √ converts 2
+    √ converts 3
+    √ converts 4
+    √ converts 5
+    √ converts 6
+    √ converts 9
+    √ converts 16 (1 ms)
+    √ converts 27 (1 ms)
+    √ converts 48 (1 ms)
+    √ converts 49 (1 ms)
+    √ converts 59 (1 ms)
+    √ converts 66
+    √ converts 93
+    √ converts 141
+    √ converts 163
+    √ converts 166 (1 ms)
+    √ converts 402
+    √ converts 575
+    √ converts 666 (1 ms)
+    √ converts 911
+    √ converts 1024
+    √ converts 1666 (1 ms)
+    √ converts 3000
+    √ converts 3001
+    √ converts 3999
+
+Test Suites: 1 passed, 1 total
+Tests:       26 passed, 26 total
+Snapshots:   0 total
+Time:        1.241 s
+Ran all test suites.
+Done in 4.72s.
