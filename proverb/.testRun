@@ -1,0 +1,26 @@
+---------------------------------------
+Tue Sep 10 22:28:50 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\proverb\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./proverb.test.ts
+ PASS  ./proverb.test.ts
+  Proverb
+    √ a single consequence (4 ms)
+    √ a short chain of consequences (1 ms)
+    √ a longer chain of consequences
+    √ proverb function does not hard code the rhyme dictionary
+    √ the whole proveb
+    √ proverb is the same each time
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.239 s
+Ran all test suites.
+Done in 4.74s.
