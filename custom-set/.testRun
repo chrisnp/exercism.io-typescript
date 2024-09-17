@@ -1,0 +1,66 @@
+---------------------------------------
+Tue Sep 17 06:07:23 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\custom-set\node_modules\.bin\tsc --noEmit -p .
+ 
+ RUNS  ./custom-set.test.ts
+ PASS  ./custom-set.test.ts
+  CustomSet
+    empty: returns true if the set contains no elements
+      √ sets with no elements are empty (3 ms)
+      √ sets with elements are not empty
+    contains: sets can report if they contain an element
+      √ nothing is contained in an empty set
+      √ when the element is in the set
+      √ when the element is not in the set (1 ms)
+    subset: a set is a subset if all of its elements are contained in the other set
+      √ empty set is a subset of another empty set
+      √ empty set is a subset of non-empty set
+      √ non-empty set is not a subset of empty set
+      √ set is a subset of set with exact same elements
+      √ set is a subset of larger set with same elements
+      √ set is not a subset of set that does not contain its elements
+    disjoint: sets are disjoint if they share no elements
+      √ the empty set is disjoint with itself
+      √ empty set is disjoint with non-empty set
+      √ non-empty set is disjoint with empty set
+      √ sets are not disjoint if they share an element (1 ms)
+      √ sets are disjoint if they share no elements (1 ms)
+    eql: sets with the same elements are equal
+      √ empty sets are equal
+      √ empty set is not equal to non-empty set
+      √ non-empty set is not equal to empty set
+      √ sets with the same elements are equal (1 ms)
+      √ sets with different elements are not equal (1 ms)
+    add: unique elements can be added to a set
+      √ add to empty set (1 ms)
+      √ add to non-empty set
+      √ adding an existing element does not change the set
+    intersection: returns a set of all shared elements
+      √ intersection of two empty sets is an empty set
+      √ intersection of an empty set and non-empty set is an empty set
+      √ intersection of a non-empty set and an empty set is an empty set
+      √ intersection of two sets with no shared elements is an empty set (1 ms)
+      √ intersection of two sets with shared elements is a set of the shared elements (1 ms)
+    difference of a set is a set of all elements that are only in the first set
+      √ difference of two empty sets is an empty set
+      √ difference of empty set and non-empty set is an empty set
+      √ difference of a non-empty set and an empty set is the non-empty set
+      √ difference of two non-empty sets is a set of elements that are only in the first set
+    union: returns a set of all elements in either set
+      √ union of empty sets is an empty set
+      √ union of an empty set and non-empty set is the non-empty set
+      √ union of a non-empty set and empty set is the non-empty set (1 ms)
+      √ union of non-empty sets contains all unique elements (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       37 passed, 37 total
+Snapshots:   0 total
+Time:        1.339 s
+Ran all test suites.
+Done in 4.80s.
