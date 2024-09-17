@@ -46,6 +46,6 @@ export class CustomSet<T> {
   }
 
   difference(other: CustomSet<T>): CustomSet<T> {
-    throw new Error('Remove this statement and implement this function')
+    return new CustomSet(this.elems.filter((e) => other.contains(e)))
   }
 }
