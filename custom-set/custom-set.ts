@@ -33,19 +33,19 @@ export class CustomSet<T> {
     return this.elems.every(e => !other.contains(e))
   }
 
-  eql(other: unknown): unknown {
+  eql(other: CustomSet<T>): boolean {
+    return this.subset(other) && other.subset(this)
+  }
+
+  union(other: CustomSet<T>): CustomSet<T> {
     throw new Error('Remove this statement and implement this function')
   }
 
-  union(other: unknown): CustomSet {
+  intersection(other: CustomSet<T>): CustomSet<T> {
     throw new Error('Remove this statement and implement this function')
   }
 
-  intersection(other: unknown): CustomSet {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  difference(other: unknown): CustomSet {
+  difference(other: CustomSet<T>): CustomSet<T> {
     throw new Error('Remove this statement and implement this function')
   }
 }
