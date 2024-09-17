@@ -30,7 +30,7 @@ export class CustomSet<T> {
   }
 
   disjoint(other: CustomSet<T>): boolean {
-    return this.elems.every(e => !other.contains(e))
+    return this.intersection(other).empty()
   }
 
   eql(other: CustomSet<T>): boolean {
@@ -38,7 +38,7 @@ export class CustomSet<T> {
   }
 
   union(other: CustomSet<T>): CustomSet<T> {
-    return new CustomSet([...other.elems, this.difference(other)])
+    return new CustomSet(other.elems.concat(this.difference(other).elems))
   }
 
   intersection(other: CustomSet<T>): CustomSet<T> {
