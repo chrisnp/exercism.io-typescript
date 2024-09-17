@@ -38,7 +38,7 @@ export class CustomSet<T> {
   }
 
   union(other: CustomSet<T>): CustomSet<T> {
-    throw new Error('Remove this statement and implement this function')
+    return new CustomSet([...other.elems, this.difference(other)])
   }
 
   intersection(other: CustomSet<T>): CustomSet<T> {
@@ -46,6 +46,6 @@ export class CustomSet<T> {
   }
 
   difference(other: CustomSet<T>): CustomSet<T> {
-    return new CustomSet(this.elems.filter((e) => other.contains(e)))
+    return new CustomSet(this.elems.filter((e) => !other.contains(e)))
   }
 }
