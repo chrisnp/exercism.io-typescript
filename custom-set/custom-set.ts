@@ -29,8 +29,8 @@ export class CustomSet<T> {
     return this.elems.every(e => other.contains(e))
   }
 
-  disjoint(other: unknown): CustomSet {
-    throw new Error('Remove this statement and implement this function')
+  disjoint(other: CustomSet<T>): boolean {
+    return this.elems.every(e => !other.contains(e))
   }
 
   eql(other: unknown): unknown {
