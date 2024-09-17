@@ -4,13 +4,10 @@ export class CustomSet<T> {
 
   constructor(initial?: T[]) {
     this.elems = initial ?? []
-    this.elems = this.elems
-                 .filter((e, i) => this.elems.indexOf(e) === i)
-                 .sort()
+    // this.elems = this.elems
+    //              .filter((e, i) => this.elems.indexOf(e) === i)
+    //              .sort()
   }
-
-  // constructor(private elems: T[] = []) 
-  // {}
 
   empty(): boolean {
     return !this.elems.length
@@ -25,6 +22,14 @@ export class CustomSet<T> {
     return this
   }
 
+  eql(other: CustomSet<T>): boolean {
+    return this.subset(other) && other.subset(this)
+  }
+
+  intersection(other: CustomSet<T>): CustomSet<T> {
+    return new CustomSet(this.elems.filter((e) => other.contains(e)))
+  }
+
   subset(other: CustomSet<T>): boolean {
     return this.elems.every(e => other.contains(e))
   }
@@ -33,16 +38,8 @@ export class CustomSet<T> {
     return this.intersection(other).empty()
   }
 
-  eql(other: CustomSet<T>): boolean {
-    return this.subset(other) && other.subset(this)
-  }
-
   union(other: CustomSet<T>): CustomSet<T> {
     return new CustomSet(other.elems.concat(this.difference(other).elems))
-  }
-
-  intersection(other: CustomSet<T>): CustomSet<T> {
-    return new CustomSet(this.elems.filter((e) => other.contains(e)))
   }
 
   difference(other: CustomSet<T>): CustomSet<T> {
