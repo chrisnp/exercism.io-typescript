@@ -1,14 +1,20 @@
-export class CustomSet {
-  constructor(initial?: unknown) {
-    throw new Error('Remove this statement and implement this function')
+export class CustomSet<T> {
+
+  private elems: T[]
+
+  constructor(initial?: T[]) {
+    this.elems = initial ?? [] 
   }
 
-  empty(): unknown {
-    throw new Error('Remove this statement and implement this function')
+  // constructor(private elems: T[] = []) 
+  // {}
+
+  empty(): boolean {
+    return !this.elems.length
   }
 
-  contains(element: unknown): unknown {
-    throw new Error('Remove this statement and implement this function')
+  contains(element: T): CustomSet<T> {
+    
   }
 
   add(element: unknown): CustomSet {
