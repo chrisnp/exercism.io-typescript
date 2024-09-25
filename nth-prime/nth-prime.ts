@@ -21,4 +21,3 @@ export const nth = (n: number): number => {
   approximate < 15 ? approximate = 15 : {}
   return sieve(approximate)[n - 1]
 }
-
