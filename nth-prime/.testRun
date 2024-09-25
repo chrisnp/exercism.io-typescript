@@ -1,0 +1,25 @@
+---------------------------------------
+Wed Sep 25 23:29:04 GTBDT 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ ~\exercism\typescript\nth-prime\node_modules\.bin\tsc --noEmit -p .
+
+ RUNS  ./nth-prime.test.ts
+ PASS  ./nth-prime.test.ts
+  Prime
+    √ first (7 ms)
+    √ second (1 ms)
+    √ sixth
+    √ big prime (70 ms)
+    √ weird case (10 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        1.329 s
+Ran all test suites.
+Done in 4.62s.
