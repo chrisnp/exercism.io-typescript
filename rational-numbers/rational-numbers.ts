@@ -60,10 +60,6 @@ export class Rational {
     return Math.pow(real ** (1/this.denominator), this.numerator);
   }
 
-  toReal(): number {
-    return this.numerator / this.denominator;
-  }
-
   reduce(): Rational {
     const divisor = gcd(this.numerator, this.denominator)
     return new Rational(
