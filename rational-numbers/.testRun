@@ -1,0 +1,13 @@
+
+
+
+---------------------------------------
+Wed Oct 30 23:59:06 GTBST 2024
+---------------------------------------
+>yarn test
+
+yarn run v1.22.19
+$ yarn lint:types && jest --no-cache
+$ yarn tsc --noEmit -p .
+$ C:\Users\Chris\exercism\typescript\rational-numbers\node_modules\.bin\tsc --noEmit -p .
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
