@@ -1,70 +1,67 @@
-function gcd(x: number, y: number): number {
-  return y ? gcd(y, x % y) : x
-}
-
-const nthRoot = (base: number, n: number) => Math.pow(base, 1 / n) 
+const gcd = (x: number, y: number): number => 
+  y !== 0 ? gcd(y, x % y) : Math.abs(x)
 
 export class Rational {
-  numerator: number
-  denominator: number
+  num: number
+  den: number
 
-  constructor(numerator: number, denominator: number = 1) {
+  constructor(numerator: number, denominator = 1) {
     if (denominator === 0) throw "Can't divide by zero"
-    this.numerator = numerator
-    this.denominator = denominator
+    this.num = numerator
+    this.den = denominator
     this.reduce()
   }
 
-  add(other: Rational): Rational {
-    const numerator = 
-      this.numerator * other.denominator + other.numerator * this.denominator;
-    const denominator = 
-      this.denominator * other.denominator;
-    return new Rational(numerator, denominator);
+  get numerator(): number { return this.num }
+  get denominator(): number { return this.den }
+
+  add(that: Rational): Rational {
+    return new  Rational(
+                  this.num * that.den + that.num * this.den,
+                  this.den * that.den
+                )
   }
 
-  sub(other: Rational): Rational {
-    const numerator = 
-      this.numerator * other.denominator - other.numerator * this.denominator;
-    const denominator = 
-      this.denominator * other.denominator;
-    return new Rational(numerator, denominator);
+  sub(that: Rational): Rational {
+    return new  Rational(
+                  this.num * that.den - that.num * this.den,
+                  this.den * that.den
+                )
+}
+
+  mul(that: Rational): Rational {
+    return new Rational(this.num * that.num, this.den * that.den)
   }
 
-  mul(other: Rational): Rational {
-    const numerator = this.numerator * other.numerator;
-    const denominator = this.denominator * other.denominator;
-    return new Rational(numerator, denominator);
-  }
-
-  div(other: Rational): Rational {
-    const numerator = this.numerator * other.denominator;
-    const denominator = this.denominator * other.numerator;
-    return new Rational(numerator, denominator);
+  div(that: Rational): Rational {
+    return new Rational(this.num * that.den, this.den * that.num).reduce()
   }
 
   abs(): Rational {
-    return new Rational(Math.abs(this.numerator), Math.abs(this.denominator))
+    return new Rational(
+                  Math.abs(this.num), 
+                  Math.abs(this.den)
+               ).reduce()
   }
 
   exprational(exponent: number): Rational {
-    if (exponent < 0) {
-      exponent = -exponent
-      return new Rational(this.denominator ** exponent, this.numerator ** exponent)
-    } else {
-      return new Rational(this.numerator ** exponent, this.denominator ** exponent)
-    }
+    return (exponent < 0)
+           ? new Rational(this.den ** -exponent, this.num ** -exponent)
+                 .reduce()
+           : new Rational(this.num ** exponent, this.den ** exponent)
+                 .reduce()
   }
 
   expreal(real: number): number {
-    return Math.pow(real ** (1/this.denominator), this.numerator);
+    return real ** (this.num / this.den)
   }
 
   reduce(): Rational {
-    const divisor = gcd(this.numerator, this.denominator)
-    return new Rational(
-                  this.numerator / divisor, 
-                  this.denominator / divisor
-               )
+    const gcdiv = gcd(this.num, this.den)
+    this.num /= gcdiv
+    this.den /= gcdiv
+    return this.den < 0
+           ? new Rational(-this.num, -this.den).reduce()
+           : this
   }
 }
