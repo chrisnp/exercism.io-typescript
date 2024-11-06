@@ -1,0 +1,36 @@
+---------------------------------------
+Wed Nov  6 23:26:34 GTBST 2024
+---------------------------------------
+>yarn test
+
+[tests] tsc: ✅, tstyche: ❌, jest: ✅,
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+ PASS  ./isbn-verifier.test.ts
+  ISBN Verifier
+    √ valid isbn (3 ms)
+    √ invalid isbn check digit (1 ms)
+    √ valid isbn with a check digit of 10 (1 ms)
+    √ check digit is a character other than X (1 ms)
+    √ invalid check digit in isbn is not treated as zero
+    √ invalid character in isbn is not treated as zero
+    √ X is only valid as a check digit
+    √ valid isbn without separating dashes
+    √ isbn without separating dashes and X as check digit
+    √ isbn without check digit and dashes
+    √ too long isbn (1 ms)
+    √ too long isbn and no dashes (1 ms)
+    √ too short isbn
+    √ isbn without check digit
+    √ check digit of X should not be used for 0
+    √ empty isbn (1 ms)
+    √ input is 9 characters
+    √ invalid characters are not ignored after checking length
+    √ invalid characters are not ignored before checking length
+    √ input is too long but contains a valid isbn
+
+Test Suites: 1 passed, 1 total
+Tests:       20 passed, 20 total
+Snapshots:   0 total
+Time:        1.303 s
+Ran all test suites.
