@@ -1,0 +1,32 @@
+---------------------------------------
+Thu Nov 14 05:23:29 GTBST 2024
+---------------------------------------
+>yarn test
+
+[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+
+PASS ./bank-account.test.ts
+  Bank Account
+    √ newly opened account has zero balance (4 ms)
+    √ can deposit money (1 ms)
+    √ can deposit money sequentially (1 ms)
+    √ can withdraw money
+    √ can withdraw money sequentially (1 ms)
+    √ checking balance of closed account throws error (12 ms)
+    √ deposit into closed account throws error (1 ms)
+    √ withdraw from closed account throws error (1 ms)
+    √ close already closed account throws error (1 ms)
+    √ open already opened account throws error (1 ms)
+    √ reopened account does not retain balance (1 ms)
+    √ cannot withdraw more than deposited (1 ms)
+    √ cannot withdraw negative amount
+    √ cannot deposit negative amount
+    √ changing balance directly throws error
+
+Test Suites: 1 passed, 1 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        1.47 s
+Ran all test suites.
