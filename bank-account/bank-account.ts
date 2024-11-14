@@ -1,31 +1,37 @@
 export class ValueError extends Error {
-  constructor() {
-    super('Bank account error')
-  }
+  constructor() { super('Bank account error') }
 }
 
 export class BankAccount {
-  constructor() {
-    throw new Error('Remove this statement and implement this function')
-  }
+    private Balance: number = NaN
+    private Open: boolean = false
 
-  open(): unknown {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  close(): unknown {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  deposit(_argument: unknown): unknown {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  withdraw(_argument: unknown): unknown {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  get balance(): unknown {
-    throw new Error('Remove this statement and implement this function')
-  }
+    constructor() {
+        this.Balance = NaN
+        this.Open = false
+    }
+    open(): void {
+        if (this.Open) throw new ValueError()
+        this.Open = true
+        this.Balance = 0
+    }
+    close(): void {
+        if (this.Open === false || isNaN(this.Balance)) 
+            throw new ValueError()
+        this.Balance = NaN
+        this.Open = false
+    }
+    deposit(amount: number): void {
+        if (!this.Open || amount < 0) throw new ValueError()
+        this.Balance += amount
+    }
+    withdraw(amount: number): void {
+        if (!this.Open || amount < 0 || amount > this.Balance) 
+            throw new ValueError()
+        this.Balance -= amount
+    }
+    get balance(): number {
+        if (isNaN(this.Balance)) throw new ValueError()
+        return this.Balance
+    }
 }
