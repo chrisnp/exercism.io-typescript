@@ -1,5 +1,5 @@
 ---------------------------------------
-Fri Nov 22 12:37:09 GTBST 2024
+Fri Nov 22 12:43:28 GTBST 2024
 ---------------------------------------
 >yarn test
 
@@ -9,14 +9,14 @@ Fri Nov 22 12:37:09 GTBST 2024
 PASS ./beer-song.test.ts
   Beer
     ΓêÜ prints an arbitrary verse (4 ms)
-    ΓêÜ handles 1 bottle
-    ΓêÜ handles 0 bottles
-    ΓêÜ sings several verses (1 ms)
+    ΓêÜ handles 1 bottle (1 ms)
+    ΓêÜ handles 0 bottles (1 ms)
+    ΓêÜ sings several verses
     ΓêÜ sings the rest of the verses
     ΓêÜ sings all the verses (1 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       6 passed, 6 total
 Snapshots:   0 total
-Time:        1.405 s
+Time:        1.363 s
 Ran all test suites.
