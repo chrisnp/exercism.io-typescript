@@ -1,7 +1,5 @@
-const bottles = (n: number): string => n === 0 
-                               ? `No more bottles` 
-                               : n === 1 ? `1 bottle`
-                                         : `${n} bottles`
+const bottles = (n: number): string => 
+    n === 0 ? `No more bottles` : n === 1 ? `1 bottle` : `${n} bottles`
 
 const action = (current: number): string => 
     (current === 0) 
@@ -19,12 +17,10 @@ export function verse(index: number = 0): string {
     return v0 + v1 + '\n' + v2 + v3 + '\n' + v4
 }
 
-export function sing(
-    initialBottlesCount: number = 99,
-    takeDownCount: number = 0
-): string {
-    if (initialBottlesCount === takeDownCount) 
-        return verse(initialBottlesCount)
-    return verse(initialBottlesCount) + '\n' + 
-           sing(initialBottlesCount - 1, takeDownCount) 
+export function sing(initialBottlesCount: number = 99, 
+                     takeDownCount: number = 0) : string {
+    return  initialBottlesCount === takeDownCount
+            ? verse(initialBottlesCount)
+            : verse(initialBottlesCount) + '\n' + 
+              sing(initialBottlesCount - 1, takeDownCount) 
 }
