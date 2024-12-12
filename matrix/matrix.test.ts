@@ -1,4 +1,4 @@
-import { describe, it, expect, it } from '@jest/globals'
+import { describe, expect, it } from '@jest/globals'
 import { Matrix } from './matrix.ts'
 
 describe('Matrix', () => {
