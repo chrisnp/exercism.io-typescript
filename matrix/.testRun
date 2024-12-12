@@ -1,0 +1,24 @@
+---------------------------------------
+Thu Dec 12 23:52:19 GTBST 2024
+---------------------------------------
+>yarn test
+
+[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+PASS ./matrix.test.ts
+  Matrix
+    √ extract row from one number matrix (5 ms)
+    √ can extract row
+    √ extract row where numbers have different widths (1 ms)
+    √ can extract row from non-square matrix (3 ms)
+    √ extract column from one number matrix (1 ms)
+    √ can extract column
+    √ can extract column from non-square matrix
+    √ extract column where numbers have different widths (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        1.529 s
+Ran all test suites.
