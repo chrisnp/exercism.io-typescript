@@ -8,12 +8,12 @@ Fri Nov 22 12:43:28 GTBST 2024
 [tests] tstyche (implementation tests)
 PASS ./beer-song.test.ts
   Beer
-    ΓêÜ prints an arbitrary verse (4 ms)
-    ΓêÜ handles 1 bottle (1 ms)
-    ΓêÜ handles 0 bottles (1 ms)
-    ΓêÜ sings several verses
-    ΓêÜ sings the rest of the verses
-    ΓêÜ sings all the verses (1 ms)
+    √ prints an arbitrary verse (4 ms)
+    √ handles 1 bottle (1 ms)
+    √ handles 0 bottles (1 ms)
+    √ sings several verses
+    √ sings the rest of the verses
+    √ sings all the verses (1 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       6 passed, 6 total
