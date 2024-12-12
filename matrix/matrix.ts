@@ -1,13 +1,20 @@
 export class Matrix {
-  constructor() {
-    throw new Error('Remove this statement and implement this function')
+  private _rows: number[][]
+  private _columns: number[][]
+
+  constructor(matrix: string) {
+    this._rows = matrix.split('\n')
+                       .map(r => r.split(' ')
+                                  .map(n => Number(n)))
+    this._columns = this._rows[0]
+                        .map((_, i) => this._rows.map((r) => r[i]))
   }
 
-  get rows(): unknown {
-    throw new Error('Remove this statement and implement this function')
+  get rows(): number[][] {
+    return this._rows
   }
 
-  get columns(): unknown {
-    throw new Error('Remove this statement and implement this function')
+  get columns(): number[][] {
+    return this._columns
   }
 }
