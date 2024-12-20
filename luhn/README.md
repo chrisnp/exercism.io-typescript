@@ -21,6 +21,7 @@ All other non-digit characters are disallowed.
 
 ```text
 4539 3195 0343 6467
+
 ```
 
 The first step of the Luhn algorithm is to double every second digit, starting from the right.
