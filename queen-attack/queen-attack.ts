@@ -30,12 +30,9 @@ export class QueenAttack {
   }
 
   get canAttack(): boolean {
-    const [wfile, wrank] = this.white,
-          [bfile, brank] = this.black,
-          dfile = Math.abs(wfile - bfile),
-          drank = Math.abs(wrank - brank)
-    return dfile * drank === 0 || 
-           dfile / drank === 1
+    const [wfile, wrank] = this.white, [bfile, brank] = this.black,
+          dfile = Math.abs(wfile - bfile), drank = Math.abs(wrank - brank)
+    return dfile * drank === 0 || dfile / drank === 1
   }
 }
 
