@@ -1,0 +1,35 @@
+---------------------------------------
+Wed Feb 12 00:44:56 GTBST 2025
+---------------------------------------
+>yarn test
+
+[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+PASS ./phone-number.test.ts
+  Phone Number
+    Cleanup user-entered phone numbers
+      ΓêÜ cleans the number (4 ms)
+      ΓêÜ cleans numbers with dots
+      ΓêÜ cleans numbers with multiple spaces
+      ΓêÜ invalid when 9 digits (13 ms)
+      ΓêÜ invalid when 11 digits does not start with a 1 (2 ms)
+      ΓêÜ valid when 11 digits and starting with 1
+      ΓêÜ valid when 11 digits and starting with 1 even with punctuation
+      ΓêÜ invalid when more than 11 digits (1 ms)
+      ΓêÜ invalid with letters (2 ms)
+      ΓêÜ invalid with punctuations (1 ms)
+      ΓêÜ invalid if area code starts with 0 (1 ms)
+      ΓêÜ invalid if area code starts with 1 (1 ms)
+      ΓêÜ invalid if exchange code starts with 0 (1 ms)
+      ΓêÜ invalid if exchange code starts with 1 (1 ms)
+      ΓêÜ invalid if area code starts with 0 on valid 11-digit number (1 ms)
+      ΓêÜ invalid if area code starts with 1 on valid 11-digit number (1 ms)
+      ΓêÜ invalid if exchange code starts with 0 on valid 11-digit number (1 ms)
+      ΓêÜ invalid if exchange code starts with 1 on valid 11-digit number (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       18 passed, 18 total
+Snapshots:   0 total
+Time:        1.656 s
+Ran all test suites.
