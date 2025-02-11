@@ -1,3 +1,24 @@
-export function clean() {
-  throw new Error('Remove this statement and implement this function')
+export const clean = (phoneNumber: string) => {
+  if (/[a-zA-Z]/i.test(phoneNumber))
+      throw new Error('Letters not permitted') 
+  if (/[@:!#$%^&]/i.test(phoneNumber)) 
+      throw new Error('Punctuations not permitted')
+  let num = phoneNumber.replace(/[\D]/g, '')
+  if (num.length < 10) 
+      throw new Error('Incorrect number of digits')
+  if (num.length > 11) 
+      throw new Error('More than 11 digits')
+  if (num.length === 11 && num[0] != '1') 
+      throw new Error('11 digits must start with 1')
+  if (num.length === 11 && num[0] == '1') 
+      num = num.slice(1)
+  if (num[0] === '0') 
+      throw new Error('Area code cannot start with zero')
+  if (num[0] === '1') 
+      throw new Error('Area code cannot start with one')
+  if (num[3] === '0')
+      throw new Error('Exchange code cannot start with zero')
+  if (num[3] === '1')
+      throw new Error('Exchange code cannot start with one')
+  return  num
 }
