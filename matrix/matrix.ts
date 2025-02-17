@@ -4,8 +4,7 @@ export class Matrix {
 
   constructor(matrix: string) {
     this._rows = matrix.split('\n')
-                       .map(r => r.split(' ')
-                                  .map(n => Number(n)))
+                       .map(r => r.split(' ').map(n => Number(n)))
     this._columns = this._rows[0]
                         .map((_, i) => this._rows.map((r) => r[i]))
   }
