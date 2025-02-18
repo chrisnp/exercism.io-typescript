@@ -35,14 +35,14 @@ Mon Feb 17 20:08:31 GTBST 2025
 [tests] tstyche (implementation tests)
 PASS ./matrix.test.ts
   Matrix
-    ΓêÜ extract row from one number matrix (5 ms)
-    ΓêÜ can extract row (1 ms)
-    ΓêÜ extract row where numbers have different widths
-    ΓêÜ can extract row from non-square matrix
-    ΓêÜ extract column from one number matrix (1 ms)
-    ΓêÜ can extract column
-    ΓêÜ can extract column from non-square matrix
-    ΓêÜ extract column where numbers have different widths
+    √ extract row from one number matrix (5 ms)
+    √ can extract row (1 ms)
+    √ extract row where numbers have different widths
+    √ can extract row from non-square matrix
+    √ extract column from one number matrix (1 ms)
+    √ can extract column
+    √ can extract column from non-square matrix
+    √ extract column where numbers have different widths
 
 Test Suites: 1 passed, 1 total
 Tests:       8 passed, 8 total
