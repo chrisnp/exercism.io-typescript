@@ -24,3 +24,32 @@ Tests:       10 passed, 10 total
 Snapshots:   0 total
 Time:        1.91 s
 Ran all test suites.
+
+
+
+---------------------------------------
+Fri Mar  7 17:29:31 GTBST 2025
+---------------------------------------
+>yarn test
+
+[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+PASS ./grade-school.test.ts
+  School
+    √ a new school has an empty roster (5 ms)
+    √ adding a student adds them to the roster for the given grade
+    √ adding more students to the same grade adds them to the roster (1 ms)
+    √ adding students to different grades adds them to the roster (1 ms)
+    √ grade returns the students in that grade in alphabetical order (1 ms)
+    √ grade returns an empty array if there are no students in that grade (1 ms)
+    √ the students names in each grade in the roster are sorted (1 ms)
+    √ roster cannot be modified outside of module (1 ms)
+    √ roster cannot be modified outside of module using grade() (1 ms)
+    √ a student can't be in two different grades (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        2.016 s
+Ran all test suites.
