@@ -1,4 +1,4 @@
-import { beforeEach, describe, it, expect, it } from '@jest/globals'
+import { beforeEach, describe, expect, it } from '@jest/globals'
 import { GradeSchool } from './grade-school.ts'
 
 describe('School', () => {
