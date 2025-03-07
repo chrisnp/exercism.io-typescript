@@ -8,19 +8,14 @@ export class GradeSchool {
     return deepcopy(this.db) as Roster
   }
   add(name: string, grade: number): void {
-    this.remove(name)
+    for (let grade in this.db)
+      this.db[grade] = this.db[grade].filter(n => n !== name)
     this.db[grade] = this.db[grade] || []
     this.db[grade].push(name)
     this.db[grade].sort()
-    
   }
   grade(grade: number): string[] {
     return deepcopy(this.db[grade] ?? []) as string[]
-  }
-  private remove(name: string): void {
-    for (let grade in this.db)
-        this.db[grade] = this.db[grade]
-                             .filter(n => n !== name)
   }
 }
 
