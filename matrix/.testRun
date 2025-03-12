@@ -3,7 +3,7 @@ Thu Dec 12 23:52:19 GTBST 2024
 ---------------------------------------
 >yarn test
 
-[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc: ✅, tstyche: ❌, jest: ✅, 
 [tests] tsc (compile)
 [tests] tstyche (implementation tests)
 PASS ./matrix.test.ts
@@ -30,7 +30,7 @@ Mon Feb 17 20:08:31 GTBST 2025
 ---------------------------------------
 >yarn test
 
-[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc: ✅, tstyche: ❌, jest: ✅, 
 [tests] tsc (compile)
 [tests] tstyche (implementation tests)
 PASS ./matrix.test.ts
