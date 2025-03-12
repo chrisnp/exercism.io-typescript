@@ -95,3 +95,41 @@ Tests:       22 passed, 22 total
 Snapshots:   0 total
 Time:        1.567 s
 Ran all test suites.
+
+
+
+---------------------------------------
+Fri Mar  7 20:03:27 GTBST 2025
+---------------------------------------
+>yarn test
+
+PASS ./luhn.test.ts
+  Luhn
+    √ single digit strings can not be valid (4 ms)
+    √ a single zero is invalid (1 ms)
+    √ a simple valid SIN that remains valid if reversed
+    √ a simple valid SIN that becomes invalid if reversed
+    √ a valid Canadian SIN (1 ms)
+    √ invalid Canadian SIN
+    √ invalid credit card
+    √ invalid long number with an even remainder (1 ms)
+    √ invalid long number with a remainder divisible by 5
+    √ valid number with an even number of digits
+    √ valid number with an odd number of spaces
+    √ valid strings with a non-digit added at the end become invalid (1 ms)
+    √ valid strings with punctuation included become invalid
+    √ valid strings with symbols included become invalid (1 ms)
+    √ single zero with space is invalid
+    √ more than a single zero is valid
+    √ input digit 9 is correctly converted to output digit 9
+    √ very long input is valid
+    √ valid luhn with an odd number of digits and non zero first digit
+    √ using ascii value for non-doubled non-digit isn't allowed (1 ms)
+    √ using ascii value for doubled non-digit isn't allowed
+    √ non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       22 passed, 22 total
+Snapshots:   0 total
+Time:        1.852 s
+Ran all test suites.

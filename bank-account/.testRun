@@ -3,7 +3,7 @@ Thu Nov 14 05:23:29 GTBST 2024
 ---------------------------------------
 >yarn test
 
-[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc: ✅, tstyche: ❌, jest: ✅, 
 [tests] tsc (compile)
 [tests] tstyche (implementation tests)
 
