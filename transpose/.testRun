@@ -1,0 +1,29 @@
+---------------------------------------
+Fri Mar 21 19:39:08 GTBST 2025
+---------------------------------------
+>yarn test
+
+[tests] tsc: ✅, tstyche: ❌, jest: ✅, 
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+RUNS ./transpose.test.ts
+PASS ./transpose.test.ts
+  Transpose
+    √ empty string (7 ms)
+    √ two characters in a row (1 ms)
+    √ two characters in a column
+    √ simple
+    √ single line (1 ms)
+    √ first line longer than second line
+    √ second line longer than first line
+    √ square
+    √ rectangle (1 ms)
+    √ triangle (1 ms)
+    √ jagged triangle
+    √ test many lines
+
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        1.641 s
+Ran all test suites.
