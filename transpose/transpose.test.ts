@@ -1,4 +1,4 @@
-import { describe, it, expect, it } from '@jest/globals'
+import { describe, expect, it } from '@jest/globals'
 import { transpose } from './transpose.ts'
 
 describe('Transpose', () => {
