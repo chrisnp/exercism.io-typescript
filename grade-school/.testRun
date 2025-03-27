@@ -3,7 +3,7 @@ Fri Mar  7 17:17:50 GTBST 2025
 ---------------------------------------
 >yarn test
 
-[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc: ✅, tstyche: ❌, jest: ✅, 
 [tests] tsc (compile)
 [tests] tstyche (implementation tests)
 PASS ./grade-school.test.ts
@@ -32,7 +32,7 @@ Fri Mar  7 17:29:31 GTBST 2025
 ---------------------------------------
 >yarn test
 
-[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc: ✅, tstyche: ❌, jest: ✅, 
 [tests] tsc (compile)
 [tests] tstyche (implementation tests)
 PASS ./grade-school.test.ts
