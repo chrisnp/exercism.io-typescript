@@ -1,0 +1,27 @@
+--------------------------------------------------------
+Fri Apr  4 00:40:48 GTBDT 2025
+--------------------------------------------------------
+>yarn test
+
+[tests] tsc: ✅, tstyche: ❌, jest: ✅, 
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+
+RUNS ./binary-search-tree.test.ts
+PASS ./binary-search-tree.test.ts
+  BinarySearchTree
+    √ should retain data (7 ms)
+    √ should insert a lesser number to the left (2 ms)
+    √ should insert the same number to the left (1 ms)
+    √ should insert a greater number to the right (1 ms)
+    √ should deal with a complex tree (2 ms)
+    √ should iterate over one element (1 ms)
+    √ should iterate over smaller element
+    √ should iterate over larger element
+    √ should iterate over complex tree
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        2.294 s
+Ran all test suites.
