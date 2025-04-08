@@ -4,9 +4,6 @@ export class CustomSet<T> {
 
   constructor(initial?: T[]) {
     this.elems = initial ?? []
-    // this.elems = this.elems
-    //              .filter((e, i) => this.elems.indexOf(e) === i)
-    //              .sort()
   }
 
   empty(): boolean {
@@ -14,7 +11,7 @@ export class CustomSet<T> {
   }
 
   contains(element: T): boolean {
-    return this.elems.indexOf(element) >= 0
+    return this.elems.indexOf(element) > -1
   }
 
   add(element: T): CustomSet<T> {
@@ -22,27 +19,27 @@ export class CustomSet<T> {
     return this
   }
 
-  eql(other: CustomSet<T>): boolean {
-    return this.subset(other) && other.subset(this)
+  eql(that: CustomSet<T>): boolean {
+    return this.subset(that) && that.subset(this)
   }
 
-  intersection(other: CustomSet<T>): CustomSet<T> {
-    return new CustomSet(this.elems.filter((e) => other.contains(e)))
+  intersection(that: CustomSet<T>): CustomSet<T> {
+    return new CustomSet(this.elems.filter((e) => that.contains(e)))
   }
 
-  subset(other: CustomSet<T>): boolean {
-    return this.elems.every(e => other.contains(e))
+  subset(that: CustomSet<T>): boolean {
+    return this.elems.every(e => that.contains(e))
   }
 
-  disjoint(other: CustomSet<T>): boolean {
-    return this.intersection(other).empty()
+  disjoint(that: CustomSet<T>): boolean {
+    return this.intersection(that).empty()
   }
 
-  union(other: CustomSet<T>): CustomSet<T> {
-    return new CustomSet(other.elems.concat(this.difference(other).elems))
+  union(that: CustomSet<T>): CustomSet<T> {
+    return new CustomSet(that.elems.concat(this.difference(that).elems))
   }
 
-  difference(other: CustomSet<T>): CustomSet<T> {
-    return new CustomSet(this.elems.filter((e) => !other.contains(e)))
+  difference(that: CustomSet<T>): CustomSet<T> {
+    return new CustomSet(this.elems.filter((e) => !that.contains(e)))
   }
 }
