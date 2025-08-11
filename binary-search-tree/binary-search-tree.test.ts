@@ -1,7 +1,7 @@
 import { describe, it, expect } from '@jest/globals'
 import { BinarySearchTree } from './binary-search-tree.ts'
 
-function recordAllData(bst: BinarySearchTree): unknown[] {
+function recordAllData(bst: BinarySearchTree<unknown>): unknown[] {
   const out: unknown[] = []
   bst.each((data) => {
     out.push(data)
