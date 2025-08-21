@@ -1,0 +1,26 @@
+--------------------------------------------------------
+Thu Aug 21 22:29:43 GTBDT 2025
+--------------------------------------------------------
+>yarn test
+
+[tests] tsc: ✅, tstyche: ❌, jest: ✅, 
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+PASS ./pythagorean-triplet.test.ts
+  Triplet
+    √ triplets whose sum is 12 (4 ms)
+    √ triplets whose sum is 108 (1 ms)
+    √ triplets whose sum is 1000 (4 ms)
+    √ no matching triplets for 1001 (7 ms)
+    √ returns all matching triplets (1 ms)
+    √ several matching triplets (5 ms)
+    √ returns triplets with no factor smaller than minimum factor
+    √ returns triplets with no factor larger than maximum factor
+    √ returns triplets with factors in range (1 ms)
+    √ triplets for large number (361 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        2.108 s
+Ran all test suites.
