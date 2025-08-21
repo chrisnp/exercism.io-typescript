@@ -35,7 +35,7 @@ export const triplets = (
       const c = sum - a - b
       if (c <= b || c < minFactor || c > maxFactor) 
         continue
-      if (c === ((x**2) + (y**2))**0.5) {
+      if (c === ((a ** 2) + (b ** 2)) ** 0.5) {
         pythagoreans.push(new Triplet(a, b, c))
       }
     }
