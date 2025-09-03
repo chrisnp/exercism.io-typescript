@@ -1,0 +1,29 @@
+--------------------------------------------------------
+Thu Sep  4 00:09:38 GTBDT 2025
+--------------------------------------------------------
+>yarn test
+
+[tests] tsc: Γ£à, tstyche: Γ¥î, jest: Γ£à, 
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+PASS ./largest-series-product.test.ts
+  Largest Series Product
+    ΓêÜ finds the largest product if span equals length (5 ms)
+    ΓêÜ can find the largest product of 2 with numbers in order (1 ms)
+    ΓêÜ can find the largest product of 2 (1 ms)
+    ΓêÜ can find the largest product of 3 with numbers in order
+    ΓêÜ can find the largest product of 3 (1 ms)
+    ΓêÜ can find the largest product of 5 with numbers in order
+    ΓêÜ can get the largest product of a big number (1 ms)
+    ΓêÜ reports zero if the only digits are zero
+    ΓêÜ reports zero if all spans include zero (1 ms)
+    ΓêÜ rejects span longer than string length (11 ms)
+    ΓêÜ rejects empty string and nonzero span (1 ms)
+    ΓêÜ rejects invalid character in digits (1 ms)
+    ΓêÜ rejects negative span (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        1.478 s
+Ran all test suites.
