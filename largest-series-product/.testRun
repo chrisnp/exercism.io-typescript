@@ -1,0 +1,30 @@
+--------------------------------------------------------
+Thu Sep  4 00:09:38 GTBDT 2025
+--------------------------------------------------------
+>yarn test
+
+[tests] tsc: ✅, tstyche: ❌, jest: ✅, 
+[tests] tsc (compile)
+[tests] tstyche (implementation tests)
+
+PASS ./largest-series-product.test.ts
+  Largest Series Product
+    √ finds the largest product if span equals length (5 ms)
+    √ can find the largest product of 2 with numbers in order (1 ms)
+    √ can find the largest product of 2 (1 ms)
+    √ can find the largest product of 3 with numbers in order
+    √ can find the largest product of 3 (1 ms)
+    √ can find the largest product of 5 with numbers in order
+    √ can get the largest product of a big number (1 ms)
+    √ reports zero if the only digits are zero
+    √ reports zero if all spans include zero (1 ms)
+    √ rejects span longer than string length (11 ms)
+    √ rejects empty string and nonzero span (1 ms)
+    √ rejects invalid character in digits (1 ms)
+    √ rejects negative span (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        1.478 s
+Ran all test suites.
